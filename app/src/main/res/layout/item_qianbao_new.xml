@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:id="@+id/ll_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30px"
+        android:maxWidth="360px"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="+200"
+            android:textSize="36px" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginTop="20px"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="（积分赠送账户）"
+            android:textColor="#999999"
+            android:textSize="24px" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_explain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="36px"
+        android:layout_toLeftOf="@id/ll_right"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="说明：天天赏的"
+        android:textColor="#333333"
+        android:textSize="28px" />
+
+    <TextView
+        android:id="@+id/tv_remark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_explain"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="20px"
+        android:layout_toLeftOf="@id/ll_right"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="备注：嗯哼"
+        android:textColor="#999999"
+        android:textSize="28px"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_remark"
+        android:layout_marginBottom="36px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="26px"
+        android:layout_toLeftOf="@id/ll_right"
+        android:ellipsize="end"
+        android:singleLine="true"
+        android:text="2017-04-27 16:31:30"
+        android:textColor="#666666"
+        android:textSize="22px" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_below="@+id/tv_time"
+        android:background="@color/cl_background" />
+
+</RelativeLayout>

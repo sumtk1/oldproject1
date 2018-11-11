@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_my_zhuanrangjifen"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_gray">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar" />
+
+    <Button
+        android:id="@+id/btn_jifen"
+        style="@style/btn_system_style"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90px"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="确 定" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/in_titlebar"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:background="@color/white"
+            android:focusable="true"
+            android:focusableInTouchMode="true">
+
+            <TextView
+                android:id="@+id/tv_zr_01"
+                android:layout_width="170px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:text="接收人账号"
+                android:textColor="#666666"
+                android:textSize="28px" />
+
+            <EditText
+                android:id="@+id/et_zr_shouji"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/tv_zr_01"
+                android:background="@null"
+                android:hint="请输入接收人账号"
+                android:inputType="number"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+
+        <RelativeLayout
+            android:id="@+id/rl_jieshouren_xinming"
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_zr_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/tv_zr_02"
+                android:hint="自动获取接收人姓名"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/tv_zr_02"
+                android:layout_width="170px"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:text="接收人姓名"
+                android:textColor="#666666"
+                android:textSize="28px"
+                android:layout_alignBaseline="@+id/tv_zr_name"
+                android:layout_alignBottom="@+id/tv_zr_name"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="13dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+
+        <RelativeLayout
+            android:id="@+id/rl_zr_jifenleixing"
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_zr_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:text="选择积分账户"
+                android:textColor="#666666"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/tv_zr_jifenleixing"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/tv_zr_03"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="28px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30px"
+                android:src="@mipmap/ic_arrow_down" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+
+        <RelativeLayout
+            android:id="@+id/rl_keyong_jifen"
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_zr_04"
+                android:layout_width="170px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:inputType="number"
+                android:text="可用积分"
+                android:textColor="#666666"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/tv_zr_keyongjifen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/tv_zr_04"
+                android:hint="自动获取可用积分"
+                android:text=""
+                android:textColor="@color/main_color"
+                android:textSize="28px" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_zr_05"
+                android:layout_width="170px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:text="转让积分"
+                android:textColor="#666666"
+                android:textSize="28px" />
+
+            <EditText
+                android:id="@+id/et_zr_jifen"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/tv_zr_05"
+                android:background="@null"
+                android:hint="请输入要转让的积分"
+                android:inputType="number"
+                android:textColor="#333333"
+                android:textSize="28px" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_zr_leixing"
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:layout_marginTop="1px"
+            android:visibility="visible"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_zr_00"
+                android:layout_width="170px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:text="转让类型"
+                android:textColor="#666666"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/tv_zr_zhuanrangleixing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textColor="#333333"
+                android:layout_toRightOf="@+id/tv_zr_00"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="70px"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:textSize="28px" />
+
+            <ImageView
+                android:id="@+id/iv_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30px"
+                android:src="@mipmap/ic_arrow_down" />
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_zr_06"
+                android:layout_width="170px"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:text="备注"
+                android:textColor="#666666"
+                android:textSize="28px" />
+
+            <EditText
+                android:id="@+id/et_zr_beizhu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/tv_zr_06"
+                android:background="@null"
+                android:hint="请输入备注，15字以内（非必填）"
+                android:maxLength="15"
+                android:textColor="#333333"
+                android:textSize="28px" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</RelativeLayout>

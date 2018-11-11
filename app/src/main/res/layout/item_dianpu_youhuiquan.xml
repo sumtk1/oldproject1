@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="224px"
+        android:layout_height="106px"
+        android:layout_marginLeft="30px"
+        android:background="@mipmap/bg_yhq">
+
+        <TextView
+            android:id="@+id/tv_jine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="45px"
+            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="36px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="￥"
+            android:textSize="18px"
+            android:textColor="@color/white"
+            android:layout_marginLeft="22px"
+            android:layout_marginTop="55px" />
+
+        <LinearLayout
+            android:id="@+id/rl_type"
+            android:layout_width="140px"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="28px"
+            android:layout_toRightOf="@+id/tv_jine"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_youhui_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/white"
+                android:textSize="18px"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_gravity="center_horizontal" />
+
+            <TextView
+                android:layout_width="76px"
+                android:layout_height="26px"
+                android:background="@mipmap/btn_yhq"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/tv_youhui_type"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="8px" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

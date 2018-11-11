@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gloiot.hygo.ui.activity.shopping.fenlei.FenleiActivity">
+
+    <include
+        android:id="@+id/head"
+        layout="@layout/include_titlebar" />
+
+    <!--
+    xml	code	说明
+    app:indicator_color	setIndicatorColor	指示器颜色
+    app:indicator_width	setIndicatorWidth	指示器宽度
+    app:indicator_gravity	setIndicatorGravity	指示器位置
+    app:indicator_corners	setIndicatorCorners	指示器圆角
+    app:tab_mode	setTabMode	Tab高度模式
+    app:tab_height	setTabHeight	Tab高度
+    app:tab_margin	setTabMargin	Tab间距-->
+
+    <com.zyd.wlwsdk.widge.EmptyLayout
+        android:id="@+id/emptylayout_fenlei_liebiao"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/head">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/head"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <com.gloiot.hygo.ui.activity.shopping.verticaltablayout.VerticalTabLayout
+                android:id="@+id/tablayout0"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/cl_bg_view"
+                android:visibility="visible"
+                app:indicator_color="@color/cl_2b9ced"
+                app:indicator_gravity="left"
+                app:tab_height="96px"
+                app:tab_mode="scrollable" />
+
+
+            <com.zyd.wlwsdk.widge.EmptyLayout
+                android:id="@+id/emptylayout_fenlei_shangpin"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/head"
+                android:layout_toRightOf="@id/tablayout0"
+                android:layout_weight="3">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_shouye_liebiao_zhanshi"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/cl_white" />
+
+            </com.zyd.wlwsdk.widge.EmptyLayout>
+        </LinearLayout>
+    </com.zyd.wlwsdk.widge.EmptyLayout>
+</com.zyd.wlwsdk.autolayout.AutoRelativeLayout>

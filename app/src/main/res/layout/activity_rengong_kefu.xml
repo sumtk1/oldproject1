@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_background"
+    android:orientation="vertical"
+    tools:context="com.gloiot.hygo.ui.activity.my.kefu.RenGongKeFuActivity">
+
+    <include layout="@layout/include_titlebar" />
+
+    <GridView
+        android:id="@+id/gv_kehu_fuwu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20px"
+        android:layout_marginTop="20px" />
+</LinearLayout>

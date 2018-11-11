@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_titlebar" />
+
+    <com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/prl_lishi_fankui_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title">
+
+        <include layout="@layout/load_head" />
+
+        <com.zyd.wlwsdk.widge.pulltorefresh.PullableListView
+            android:id="@+id/prl_lishi_fankui_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cl_background"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+        <include layout="@layout/load_more" />
+
+    </com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout>
+
+</LinearLayout>

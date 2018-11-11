@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/item_youhuiquan_background"
+        android:layout_width="660px"
+        android:layout_height="278px"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12px"
+        android:layout_marginTop="12px"
+        android:background="@mipmap/ic_wodeyouhuiquan_hongbaoleixing2"
+        android:paddingLeft="36px"
+        android:paddingRight="30px"
+        app:layout_auto_basewidth="height">
+
+        <TextView
+            android:id="@+id/item_youhuiquan_money_fuhao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/item_youhuiquan_money"
+            android:text="¥"
+            android:textColor="@color/cl_fb4e44"
+            android:textSize="44px" />
+
+        <TextView
+            android:id="@+id/item_youhuiquan_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="14px"
+            android:layout_marginTop="44px"
+            android:layout_toRightOf="@+id/item_youhuiquan_money_fuhao"
+            android:text="5"
+            android:textColor="@color/cl_fb4e44"
+            android:textSize="76px" />
+
+        <TextView
+            android:id="@+id/item_youhuiquan_tiaojian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/item_youhuiquan_money"
+            android:layout_marginLeft="14px"
+            android:layout_toRightOf="@+id/item_youhuiquan_money"
+            android:text="(满50可用)"
+            android:textColor="@color/cl_333333"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/item_youhuiquan_shuliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/item_youhuiquan_money"
+            android:layout_marginLeft="14px"
+            android:layout_toRightOf="@+id/item_youhuiquan_tiaojian"
+            android:text="X2"
+            android:textColor="@color/cl_fb4e44"
+            android:textSize="24px"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="128px"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/item_youhuiquan_shiyong"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            app:layout_auto_basewidth="height">
+
+            <TextView
+                android:id="@+id/item_youhuiquan_shuoming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/item_youhuiquan_shangjia"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:text="仅限本账户使用，不可与其他红包叠加使用"
+                android:textColor="@color/cl_999999"
+                android:textSize="22px" />
+
+            <TextView
+                android:id="@+id/item_youhuiquan_shangjia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/item_youhuiquan_time"
+                android:layout_marginTop="10px"
+                android:text="只限环游购自营店使用"
+                android:textColor="@color/cl_999999"
+                android:textSize="22px" />
+
+            <TextView
+                android:id="@+id/item_youhuiquan_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10px"
+                android:text="有效期 2017.05.24-06.11"
+                android:textColor="@color/cl_999999"
+                android:textSize="22px" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/item_youhuiquan_zhuangtai"
+            android:layout_width="140px"
+            android:layout_height="140px"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="50px"
+            app:layout_auto_basewidth="height" />
+
+        <TextView
+            android:id="@+id/item_youhuiquan_shiyong"
+            android:layout_width="134px"
+            android:layout_height="58px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="32px"
+            android:background="@drawable/bg_btn_red"
+            android:gravity="center"
+            android:text="立即使用"
+            android:textColor="@color/cl_fb4e44"
+            android:textSize="24px"
+            android:visibility="gone"
+            app:layout_auto_basewidth="height" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

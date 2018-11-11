@@ -1,0 +1,437 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_overseas_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gloiot.hygo.ui.activity.login.RegisterActivity">
+
+    <include layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toptitle_rl"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="20px"
+                android:background="@drawable/bg_bank_tianjia"
+                android:orientation="vertical"
+                android:paddingLeft="20px">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px">
+
+                    <TextView
+                        android:id="@+id/tv_001"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="※"
+                        android:textColor="@color/cl_E33333"
+                        android:textSize="26px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/tv_001"
+                        android:gravity="center_vertical"
+                        android:text="此手机号可用登录及找回密码，请填写常用手机号"
+                        android:textColor="@color/cl_666666"
+                        android:textSize="26px" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/color_bg_gray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90px">
+
+                    <ImageView
+                        android:id="@+id/iv_01"
+                        android:layout_width="30px"
+                        android:layout_height="36px"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_address" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_overseas_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30px"
+                        android:layout_toRightOf="@+id/iv_01"
+                        android:orientation="horizontal"
+                        android:paddingRight="30px">
+
+                        <TextView
+                            android:id="@+id/et_overseas_area"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentTop="true"
+                            android:background="@null"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:text="中国"
+                            android:textColor="@color/cl_999999"
+                            android:textSize="28px" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="20px"
+                            android:src="@mipmap/ic_arrow_down" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_overseas_quhao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="30px"
+                        android:paddingRight="30px"
+                        android:text="+86"
+                        android:textColor="@color/cl_999999"
+                        android:textSize="28px" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/color_bg_gray" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90px">
+
+                    <ImageView
+                        android:id="@+id/iv_02"
+                        android:layout_width="28px"
+                        android:layout_height="36px"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_shouji" />
+
+
+                    <EditText
+                        android:id="@+id/et_reg_overseas_phone"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30px"
+                        android:layout_toRightOf="@+id/iv_02"
+                        android:background="@null"
+                        android:hint="请输入手机号"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:textColor="@color/cl_333333"
+                        android:textColorHint="@color/b4b4b4"
+                        android:textSize="28px" />
+
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/color_bg_gray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90px">
+
+                    <ImageView
+                        android:id="@+id/iv_03"
+                        android:layout_width="32px"
+                        android:layout_height="36px"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_yanzhegnma" />
+
+                    <EditText
+                        android:id="@+id/et_reg_overseas_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30px"
+                        android:layout_toLeftOf="@+id/tv_reg_overseas_code"
+                        android:layout_toRightOf="@+id/iv_03"
+                        android:background="@null"
+                        android:hint="请输入验证码"
+                        android:maxLines="1"
+                        android:textColor="@color/cl_333333"
+                        android:textColorHint="@color/b4b4b4"
+                        android:textSize="28px" />
+
+                    <TextView
+                        android:id="@+id/tv_reg_overseas_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:paddingRight="30px"
+                        android:text="获取验证码"
+                        android:textColor="@color/main_color"
+                        android:textSize="28px" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="20px"
+                android:background="@drawable/bg_bank_tianjia"
+                android:orientation="vertical"
+                android:paddingLeft="20px">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px">
+
+                    <TextView
+                        android:id="@+id/tv_002"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="※"
+                        android:textColor="@color/cl_E33333"
+                        android:textSize="26px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/tv_002"
+                        android:gravity="center_vertical"
+                        android:text="此用户账号可用于账户登录，确认后不可更改"
+                        android:textColor="@color/cl_666666"
+                        android:textSize="26px" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/color_bg_gray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90px">
+
+                    <ImageView
+                        android:id="@+id/iv_06"
+                        android:layout_width="34px"
+                        android:layout_height="36px"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_zhanghao" />
+
+                    <EditText
+                        android:id="@+id/et_reg_overseas_zhanghao"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="30px"
+                        android:layout_toRightOf="@+id/iv_06"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="请设置账号(填写6-11位数字)"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:textColor="@color/cl_333333"
+                        android:textColorHint="@color/b4b4b4"
+                        android:textSize="28px" />
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="20px"
+                android:background="@drawable/bg_bank_tianjia"
+                android:orientation="vertical"
+                android:paddingLeft="20px">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80px">
+
+                    <TextView
+                        android:id="@+id/tv_003"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="※"
+                        android:textColor="@color/cl_E33333"
+                        android:textSize="26px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_toRightOf="@+id/tv_003"
+                        android:gravity="center_vertical"
+                        android:text="该密码为环游购账号登录密码"
+                        android:textColor="@color/cl_666666"
+                        android:textSize="26px" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/color_bg_gray" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90px">
+
+
+                    <ImageView
+                        android:id="@+id/iv_04"
+                        android:layout_width="36px"
+                        android:layout_height="36px"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_mima" />
+
+                    <EditText
+                        android:id="@+id/et_reg_overseas_psw"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30px"
+                        android:layout_toRightOf="@+id/iv_04"
+                        android:background="@null"
+                        android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                        android:hint="请输入密码6-15位"
+                        android:inputType="textPassword"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:textColor="@color/cl_333333"
+                        android:textColorHint="@color/b4b4b4"
+                        android:textSize="30px" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/color_bg_gray" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="90px">
+
+                    <ImageView
+                        android:id="@+id/iv_05"
+                        android:layout_width="36px"
+                        android:layout_height="36px"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_mima" />
+
+                    <EditText
+                        android:id="@+id/et_reg_overseas_confirm_psw"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="30px"
+                        android:layout_toRightOf="@+id/iv_05"
+                        android:background="@null"
+                        android:digits="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz"
+                        android:hint="确认密码"
+                        android:inputType="textPassword"
+                        android:maxLength="15"
+                        android:maxLines="1"
+                        android:textColor="@color/cl_333333"
+                        android:textColorHint="@color/b4b4b4"
+                        android:textSize="30px" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_register_overseas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/rl_reg_overseas_agreement"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:gravity="center_vertical"
+                    android:padding="30px">
+
+                    <ImageView
+                        android:id="@+id/im_reg_overseas_agreement"
+                        android:layout_width="30px"
+                        android:layout_height="30px"
+                        android:layout_centerVertical="true"
+                        android:src="@mipmap/ic_xuanzhong" />
+
+                    <TextView
+                        android:id="@+id/tv_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="20px"
+                        android:layout_toRightOf="@+id/im_reg_overseas_agreement"
+                        android:text="同意环游购"
+                        android:textColor="@color/cl_666666"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:id="@+id/tv_reg_overseas_agreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/tv_01"
+                        android:text="《用户注册协议、用户隐私政策》"
+                        android:textColor="@color/main_color"
+                        android:textSize="24px" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_register_overseas"
+                style="@style/btn_system_style"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="90px"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="100px"
+                android:enabled="false"
+                android:text="注 册" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

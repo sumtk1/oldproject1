@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+    <include layout="@layout/include_titlebar"/>
+
+
+    <!--没有收藏-->
+    <ImageView
+        android:id="@+id/iv_choucang_meishangpin"
+        android:layout_width="160px"
+        android:layout_height="150px"
+        android:layout_above="@+id/tv_choucang_meishangpin"
+        android:layout_centerHorizontal="true"
+        android:src="@mipmap/ic_shoucang_pg" />
+
+    <TextView
+        android:id="@+id/tv_choucang_meishangpin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:paddingTop="60px"
+        android:text="您还没有收藏的商品~"
+        android:textColor="@color/cl_999999"
+        android:textSize="32px" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/srl_swipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bt_shoucang_bianji_shanchu"
+        android:layout_below="@id/toptitle_rl">
+
+               <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+                   android:id="@+id/swipeMenuRecyclerView"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent"
+                   android:layout_gravity="center_horizontal"
+                   android:divider="#f5f6f7"
+                   android:dividerHeight="20px">
+               </com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView>
+  </android.support.v4.widget.SwipeRefreshLayout>
+
+
+    <Button
+        android:id="@+id/bt_shoucang_bianji_shanchu"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_alignParentBottom="true"
+        android:background="@color/cl_2b9ced"
+        android:text="删除"
+        android:textColor="@color/cl_white"
+        android:textSize="34px"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="355px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/cl_white"
+        android:paddingBottom="10px">
+
+        <ImageView
+            android:id="@+id/iv_item_shouye_tupian"
+            android:layout_width="355px"
+            android:layout_height="355px"
+            app:layout_auto_basewidth="height" />
+
+        <FrameLayout
+            android:id="@+id/fl_shangping_title"
+            android:layout_width="355px"
+            android:layout_height="60px"
+            android:layout_below="@+id/iv_item_shouye_tupian"
+            app:layout_auto_baseheight="width"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:layout_marginTop="20px">
+
+            <TextView
+                android:id="@+id/tv_item_shouye_title"
+                android:layout_width="wrap_content"
+                android:layout_height="60px"
+                android:ellipsize="end"
+                android:maxLines="2"
+                app:layout_auto_basewidth="height"
+                android:text=""
+                android:textColor="@color/cl_333333"
+                android:textSize="24px" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_item_shouye_renminbi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_item_shouye_jiage"
+            android:layout_below="@+id/fl_shangping_title"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="30px"
+            android:text="¥"
+            android:textColor="@color/cl_E33333"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_item_shouye_jiage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fl_shangping_title"
+            android:layout_marginLeft="5px"
+            android:layout_marginTop="20px"
+            android:layout_toRightOf="@+id/tv_item_shouye_renminbi"
+            android:maxLines="1"
+            android:maxWidth="250px"
+            android:text="0"
+            android:textColor="@color/cl_E33333"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tv_item_shouye_dizhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_item_shouye_jiage"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/fl_shangping_title"
+            android:layout_marginRight="20px"
+            android:layout_toRightOf="@+id/tv_item_shouye_jiage"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/cl_666666"
+            android:textSize="22px" />
+    </RelativeLayout>
+
+</LinearLayout>

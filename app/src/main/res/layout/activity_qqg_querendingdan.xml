@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/rl_button"
+        android:layout_below="@+id/in_titlebar">
+
+        <com.zyd.wlwsdk.autolayout.AutoLinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:background="#FCD47E">
+
+                <ImageView
+                    android:id="@+id/iv_tu"
+                    android:layout_width="30px"
+                    android:layout_height="30px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:background="@mipmap/icon_weixiao" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="12px"
+                    android:layout_marginRight="30px"
+                    android:layout_toRightOf="@+id/iv_tu"
+                    android:text="温馨提示：订单中含有不支持7天无理由退换的商品，请确认相关商品信息后提交订单"
+                    android:textColor="@color/cl_white"
+                    android:textSize="24px" />
+            </RelativeLayout>
+
+            //有地址
+
+            <RelativeLayout
+                android:id="@+id/rl_queren_dingdan_youdizhi"
+                android:layout_width="match_parent"
+                android:layout_height="152px"
+                android:layout_marginTop="24px"
+                android:background="@color/cl_white"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/tv_queren_dingdan_mingzi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="24px"
+                    android:layout_marginTop="30px"
+                    android:layout_toRightOf="@+id/imageView11"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:maxWidth="300px"
+                    android:text=""
+                    android:textColor="@color/cl_333333"
+                    android:textSize="32px" />
+
+                <TextView
+                    android:id="@+id/tv_queren_dingdan_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/tv_queren_dingdan_mingzi"
+                    android:layout_marginLeft="26px"
+                    android:layout_marginRight="70px"
+                    android:layout_toRightOf="@+id/tv_queren_dingdan_mingzi"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/cl_333333"
+                    android:textSize="32px" />
+
+                <ImageView
+                    android:id="@+id/iv_weizhi"
+                    android:layout_width="24px"
+                    android:layout_height="34px"
+                    android:layout_below="@+id/tv_queren_dingdan_mingzi"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginTop="30px"
+                    android:src="@mipmap/ic_shouhuodizhi" />
+
+                <TextView
+                    android:id="@+id/tv_queren_dingdan_dizhi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/iv_weizhi"
+                    android:layout_below="@+id/tv_queren_dingdan_mingzi"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="70px"
+                    android:layout_toRightOf="@+id/iv_weizhi"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/cl_333333"
+                    android:textSize="26px" />
+
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:layout_width="28px"
+                    android:layout_height="30px"
+                    android:layout_alignTop="@+id/tv_queren_dingdan_mingzi"
+                    android:layout_marginLeft="30px"
+                    android:src="@mipmap/ic_ren" />
+
+                <ImageView
+                    android:id="@+id/iv_dingdan_qianwang"
+                    android:layout_width="15px"
+                    android:layout_height="26px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:src="@mipmap/ic_forward01" />
+            </RelativeLayout>
+
+            <!--无发货地址-->
+            <RelativeLayout
+                android:id="@+id/rl_queren_dingdan_wudizhi"
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:layout_marginTop="24px"
+                android:background="@color/cl_white"
+                android:gravity="center_vertical"
+                android:paddingLeft="30px"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_dizhi"
+                    android:layout_width="32px"
+                    android:layout_height="32px"
+                    android:src="@mipmap/ic_weizhi" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:layout_toRightOf="@+id/iv_dizhi"
+                    android:text="请填写收货地址"
+                    android:textColor="@color/black"
+                    android:textSize="28px" />
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30px"
+                    android:src="@mipmap/ic_arrow_right_white" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="90px"
+                android:layout_marginTop="24px"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_dingdan_shengFenId"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="30px"
+                    android:layout_weight="6"
+                    android:background="@null"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="因海关清关需要，请填写收货人身份证"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColorHint="#CFCFCF"
+                    android:textSize="28px" />
+
+                <Button
+                    android:id="@+id/btn_dingdan_baocun"
+                    android:layout_width="120px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#C3C3C3"
+                    android:text="保存"
+                    android:textColor="@color/white"
+                    android:textSize="28px" />
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_queren_dingdan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="24px"
+                android:background="@color/cl_background"
+                android:visibility="visible" />
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_yunfei"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="72px"-->
+            <!--android:background="@color/cl_white">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:text="优惠券"-->
+            <!--android:textColor="#666"-->
+            <!--android:layout_marginLeft="30px"-->
+            <!--android:textSize="28px" />-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_dingdan_xiangqing_yunfei"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_toLeftOf="@+id/forward"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:text="已选择"-->
+            <!--android:textColor="#000"-->
+            <!--android:layout_marginRight="19px"-->
+            <!--android:textSize="28px" />-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/forward"-->
+            <!--android:layout_width="15px"-->
+            <!--android:layout_height="26px"-->
+            <!--android:layout_marginRight="30px"-->
+            <!--android:background="@mipmap/ic_forward01"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"/>-->
+
+            <!--<include layout="@layout/include_view_sheng" />-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/rl_dindan_youhuijine"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="72px"-->
+            <!--android:layout_below="@+id/rl_shangjinbi"-->
+            <!--android:background="@color/cl_white">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:text="优惠金额"-->
+            <!--android:textColor="#666"-->
+            <!--android:textSize="28px"-->
+            <!--android:layout_marginLeft="30px"/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_dingdan_youhuijine"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="30px"-->
+            <!--android:text="0.00"-->
+            <!--android:textColor="#000"-->
+            <!--android:textSize="28px" />-->
+
+            <!--<include layout="@layout/include_view_sheng" />-->
+
+            <!--</RelativeLayout>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100px"
+                android:layout_below="@+id/rv_queren_dingdan"
+                android:layout_marginTop="1px"
+                android:background="@color/cl_white"
+                android:orientation="horizontal"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="备注："
+                    android:textColor="@color/cl_666666"
+                    android:textSize="28px" />
+
+                <EditText
+                    android:id="@+id/et_queren_dingdan_beizhu"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:gravity="center_vertical"
+                    android:hint="（选填）"
+                    android:maxLength="50"
+                    android:paddingBottom="15px"
+                    android:paddingTop="15px"
+                    android:text=""
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_666666"
+                    android:textSize="28px" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_dingdan_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="120px"
+                android:layout_marginTop="30px"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/cb_dingdan_xieyixuanze"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@null"
+                    android:drawableLeft="@drawable/bg_dingdan_rb"
+                    android:drawablePadding="12px"
+                    android:text="购买海外商品需同意"
+                    android:textColor="@color/cl_999999"
+                    android:textSize="22px" />
+
+                <TextView
+                    android:id="@+id/tv_dingdan_xieyi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="4px"
+                    android:text="《用户购买须知》"
+                    android:textColor="#FF6D63"
+                    android:textSize="22px" />
+            </LinearLayout>
+
+
+        </com.zyd.wlwsdk.autolayout.AutoLinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_button"
+        android:layout_width="match_parent"
+        android:layout_height="96px"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="1px"
+        android:background="@color/cl_white"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/tv_heji_01"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingLeft="30px"
+            android:text="合计："
+            android:textColor="#000"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tv_queren_dingdan_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@+id/tv_heji_01"
+            android:gravity="center_vertical"
+            android:text="￥0.00"
+            android:textColor="@color/cl_E33333"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tv_queren_dingdan_yunfei"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5px"
+            android:layout_toRightOf="@+id/tv_queren_dingdan_price"
+            android:gravity="center_vertical"
+            android:text="(运费：¥0.00)"
+            android:textColor="@color/cl_666666"
+            android:textSize="24px"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_queren_dingdan_queren"
+            android:layout_width="180px"
+            android:layout_height="60px"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="#C3C3C3"
+            android:enabled="false"
+            android:text="确认"
+            android:textColor="@color/cl_white" />
+    </RelativeLayout>
+
+</RelativeLayout>

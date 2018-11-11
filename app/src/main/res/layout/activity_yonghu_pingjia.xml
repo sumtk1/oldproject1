@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shangpin_xiangqing_pingjia"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context="com.gloiot.hygo.ui.activity.shopping.YonghuPingjiaActivity">
+
+    <include layout="@layout/include_titlebar" />
+
+    <com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/ptrl_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toptitle_rl">
+
+        <include layout="@layout/load_head" />
+
+        <com.zyd.wlwsdk.widge.pulltorefresh.PullableListView
+            android:id="@+id/pull_refresh_listview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:divider="#e0e0e0"
+            android:dividerHeight="10px" />
+
+        <include layout="@layout/load_more" />
+    </com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout>
+
+</RelativeLayout>

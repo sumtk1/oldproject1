@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shangpin_pingjia"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_background"
+    tools:context="com.gloiot.hygo.ui.activity.shopping.wodedingdan.FaBiaoPingjiaActivity">
+
+    <include layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle_rl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/shangpin_pingjia_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="beforeDescendants"
+                android:divider="@null"
+                android:dividerHeight="30px"
+                android:scrollbars="none" />
+
+            <Button
+                android:id="@+id/shangpin_pingjia_fabiaopingjia"
+                android:layout_width="600px"
+                android:layout_height="80px"
+                android:layout_below="@+id/shangpin_pingjia_listview"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30px"
+                android:layout_marginTop="50px"
+                android:background="@drawable/bg_btn_confirm"
+                android:text="发表评价"
+                android:textColor="@color/cl_white"
+                android:textSize="36px" />
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

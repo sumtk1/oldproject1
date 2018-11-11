@@ -1,0 +1,765 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zyd.wlwsdk.widge.StickyScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_jiaru_goumai"
+        android:background="@color/cl_background"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.youth.banner.Banner xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/banner_detail"
+                android:layout_width="720px"
+                android:layout_height="720px"
+                android:background="@mipmap/bg_spxq_shibaitu"
+                app:indicator_drawable_selected="@mipmap/ic_yuan_dian"
+                app:indicator_drawable_unselected="@mipmap/ic_yuan_weidian"
+                app:indicator_height="18px"
+                app:indicator_margin="15px"
+                app:indicator_width="18px"
+                app:layout_auto_basewidth="height"
+                app:layout_collapseMode="pin" />
+
+
+            <LinearLayout
+                android:id="@+id/tabMainContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cl_white"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginRight="10px"
+                        android:layout_marginTop="30px">
+
+                        <LinearLayout
+                            android:id="@+id/ll_xin"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:orientation="vertical"
+                            android:padding="20px">
+
+                            <ImageView
+                                android:id="@+id/img_xin"
+                                android:layout_width="40px"
+                                android:layout_height="34px"
+                                android:src="@mipmap/ic_hongxin_no" />
+
+                            <TextView
+                                android:id="@+id/textView19"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10px"
+                                android:gravity="center_vertical"
+                                android:text="收藏"
+                                android:textColor="#666666"
+                                android:textSize="24px" />
+                        </LinearLayout>
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="30px"
+                            android:layout_toLeftOf="@+id/ll_xin"
+                            app:layout_auto_baseheight="width">
+
+
+                            <TextView
+                                android:id="@+id/tv_shangpin_dianpyu_mingcheng"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="end"
+                                android:maxLines="2"
+                                android:text=""
+                                android:textColor="#000"
+                                android:textSize="36px"
+                                app:layout_auto_baseheight="width" />
+                        </FrameLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30px"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_shangpin_dianpyu_jiage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:text="￥"
+                            android:textColor="@color/cl_E33333"
+                            android:textSize="32px" />
+
+                        <TextView
+                            android:id="@+id/tv_jiage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0.00"
+                            android:textColor="@color/cl_E33333"
+                            android:textSize="48px" />
+
+                        <TextView
+                            android:id="@+id/tv_jianyilingshoujia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="20px"
+                            android:text=""
+                            android:textColor="@color/cl_999999"
+                            android:textSize="28px" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/relativeLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_shangpin_dianpyu_jiage"
+                        android:layout_marginBottom="24px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:layout_marginTop="30px">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="快递:"
+                                android:textColor="@color/cl_666666"
+                                android:textSize="24px" />
+
+                            <TextView
+                                android:id="@+id/tv_shangpin_dianpyu_kuaidi"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0.00"
+                                android:textColor="@color/cl_666666"
+                                android:textSize="24px" />
+                        </LinearLayout>
+
+                        <!--<LinearLayout-->
+                        <!--android:id="@+id/ll_01"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:layout_centerHorizontal="true">-->
+
+                        <!--<TextView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="月销:"-->
+                        <!--android:textColor="@color/cl_666666"-->
+                        <!--android:textSize="24px" />-->
+
+                        <!--<TextView-->
+                        <!--android:id="@+id/tv_shangpin_dianpyu_yuexiao"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:text="0.00"-->
+                        <!--android:textColor="@color/cl_666666"-->
+                        <!--android:textSize="24px" />-->
+                        <!--</LinearLayout>-->
+
+                        <TextView
+                            android:id="@+id/tv_shangpin_dianpyu_dizhi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="10px"
+                            android:maxLines="1"
+                            android:text=""
+                            android:textColor="@color/cl_999999"
+                            android:textSize="24px" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <!--选择颜色尺码-->
+                <RelativeLayout
+                    android:id="@+id/rl_shangpin_xiangqing_xuanze"
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:layout_below="@+id/linearLayout3"
+                    android:layout_marginTop="30px"
+                    android:background="@color/cl_white"
+                    android:paddingRight="30px">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginLeft="30px"
+                        android:gravity="fill_vertical"
+                        android:text=""
+                        android:textColor="#333"
+                        android:textSize="30px" />
+
+                    <ImageView
+                        android:id="@+id/imageView20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@mipmap/ic_arrow_right" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_shangpin_xiangqing_pingjia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/relativeLayout4"
+                    android:layout_marginTop="30px">
+
+                    <RelativeLayout
+                        android:id="@+id/rl_shangpin_xiangqing_pingjia_top"
+                        android:layout_width="match_parent"
+                        android:layout_height="108px"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:background="@color/cl_white">
+
+                        <TextView
+                            android:id="@+id/tv_shangpin_xiangqing_pingjia"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_marginTop="46px"
+                            android:paddingLeft="30px"
+                            android:text=""
+                            android:textColor="#000"
+                            android:textSize="34px" />
+
+                        <TextView
+                            android:id="@+id/tv_shangpin_xiangqing_pingjiashu"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="46px"
+                            android:layout_toRightOf="@+id/tv_shangpin_xiangqing_pingjia"
+                            android:text=""
+                            android:textColor="#777777"
+                            android:textSize="30px" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="30px"
+                            android:layout_marginTop="46px"
+                            android:src="@mipmap/ic_arrow_right"
+                            android:visibility="visible" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1px"
+                            android:layout_alignParentBottom="true"
+                            android:background="@color/view_sheng" />
+
+                    </RelativeLayout>
+
+                    <ListView
+                        android:id="@+id/listview_shangpin_xiangqing_pingjia"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rl_shangpin_xiangqing_pingjia_top"
+                        android:layout_marginBottom="30px"
+                        android:background="@color/cl_white"
+                        android:clickable="false"
+                        android:dividerHeight="1px"
+                        android:paddingLeft="20px"
+                        android:paddingRight="20px"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_shangpin_xiangqing_dianpuxinxi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/listview_shangpin_xiangqing_pingjia"
+                    android:background="@color/cl_white"
+                    android:paddingTop="30px">
+
+                    <RelativeLayout
+                        android:id="@+id/lv_shangpin_xiangqing_dianpuxinxi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="40px"
+                        android:gravity="left">
+
+                        <ImageView
+                            android:id="@+id/img_shangpin_xiangqing_dianpuxinxi"
+                            android:layout_width="104px"
+                            android:layout_height="104px"
+                            android:background="@null"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/default_image"
+                            app:layout_auto_basewidth="height" />
+
+                        <TextView
+                            android:id="@+id/tv_shangpin_xiangqing_dianpuxinxi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="20px"
+                            android:layout_marginRight="20px"
+                            android:layout_toLeftOf="@+id/img_shangpin_xiangqing_dianpudengji"
+                            android:layout_toRightOf="@+id/img_shangpin_xiangqing_dianpuxinxi"
+                            android:text=""
+                            android:textColor="#000"
+                            android:textSize="30px" />
+
+                        <ImageView
+                            android:id="@+id/img_shangpin_xiangqing_dianpudengji"
+                            android:layout_width="80px"
+                            android:layout_height="80px"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="30px"
+                            android:background="@null"
+                            android:scaleType="fitXY"
+                            app:layout_auto_basewidth="height" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_shangpin_xiangqing_xiangxixinxi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lv_shangpin_xiangqing_dianpuxinxi"
+                        android:layout_marginTop="30px"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_shangpin_xiangqing_guanzhurenshu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#000"
+                                android:textSize="24px" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20px"
+                                android:text="关注人数"
+                                android:textColor="#000"
+                                android:textSize="24px" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="60px"
+                            android:background="@color/view_sheng" />
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_shangpin_xiangqing_shangpinshu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#000"
+                                android:textSize="24px" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20px"
+                                android:text="商品数"
+                                android:textColor="#000"
+                                android:textSize="24px" />
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="60px"
+                            android:background="@color/view_sheng" />
+
+                        <LinearLayout
+                            android:layout_width="0px"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_shangpin_xiangqing_dianpuxiaoshou"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="#000"
+                                android:textSize="24px" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20px"
+                                android:text="店铺销售"
+                                android:textColor="#000"
+                                android:textSize="24px" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rl_shangpin_xiangqing_anniu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ll_shangpin_xiangqing_xiangxixinxi"
+                        android:layout_marginBottom="66px"
+                        android:layout_marginLeft="40px"
+                        android:layout_marginRight="40px"
+                        android:layout_marginTop="66px"
+                        android:orientation="horizontal">
+
+                        <RelativeLayout
+                            android:id="@+id/rl_shangpin_xiangqing_lianximaijia"
+                            android:layout_width="0px"
+                            android:layout_height="80px"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_shangpingxiangqing_8_ff8838"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/img_shangpin_xiangqing_lianximaijia"
+                                android:layout_width="45px"
+                                android:layout_height="45px"
+                                android:src="@mipmap/ic_seller_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16px"
+                                android:layout_toRightOf="@+id/img_shangpin_xiangqing_lianximaijia"
+                                android:text="联系卖家"
+                                android:textColor="#ff8838"
+                                android:textSize="34px" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/rl_shangpin_xiangqing_jinrudianpu"
+                            android:layout_width="0px"
+                            android:layout_height="80px"
+                            android:layout_marginLeft="20px"
+                            android:layout_toRightOf="@+id/rl_shangpin_xiangqing_lianximaijia"
+                            android:layout_weight="1"
+                            android:background="@drawable/btn_shangpingxiangqing_8_e33333"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/img_shangpin_xiangqing_jinrudianpu"
+                                android:layout_width="45px"
+                                android:layout_height="45px"
+                                android:src="@mipmap/ic_store_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="16px"
+                                android:layout_toRightOf="@+id/img_shangpin_xiangqing_jinrudianpu"
+                                android:text="进入店铺"
+                                android:textColor="#e33333"
+                                android:textSize="34px" />
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <!--商品描述-->
+                <RelativeLayout
+                    android:id="@+id/relativeLayout5"
+                    android:layout_width="match_parent"
+                    android:layout_height="128px"
+                    android:layout_below="@+id/rl_shangpin_xiangqing_dianpuxinxi"
+                    android:layout_marginTop="30px"
+                    android:background="@color/cl_white"
+                    android:paddingLeft="50px"
+                    android:paddingRight="50px">
+
+                    <View
+                        style="@style/title_view"
+                        android:layout_width="200px"
+                        android:layout_height="1px"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerVertical="true">
+
+                    </View>
+
+                    <TextView
+                        android:id="@+id/textView28"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        android:gravity="center"
+                        android:text="商品信息"
+                        android:textColor="#333"
+                        android:textSize="34px" />
+
+                    <View
+                        style="@style/title_view"
+                        android:layout_width="200px"
+                        android:layout_height="1px"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="44px"
+                        android:layout_toEndOf="@+id/textView28"
+                        android:layout_toRightOf="@+id/textView28" />
+
+                </RelativeLayout>
+
+
+                <WebView
+                    android:id="@+id/wv_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="100px"></WebView>
+            </LinearLayout>
+        </LinearLayout>
+    </com.zyd.wlwsdk.widge.StickyScrollView>
+
+    <RelativeLayout
+        android:id="@+id/rl_01"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:paddingLeft="30px">
+
+        <TextView
+            android:id="@+id/toptitle_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="标题"
+            android:textColor="#00FFFFFF"
+            android:textSize="36px" />
+
+        <TextView
+            android:id="@+id/toptitle_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/cl_666666"
+            android:textSize="32px" />
+
+        <ImageView
+            android:id="@+id/toptitle_more_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:padding="15dp" />
+
+        <ImageView
+            android:id="@+id/toptitle_back"
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="20px"
+            android:src="@mipmap/ic_xiangqing_back" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_shangpinxiangqing_gouwuche"
+        android:layout_width="100px"
+        android:layout_height="84px"
+        android:layout_above="@+id/rl_jiaru_goumai"
+        android:layout_marginBottom="50px"
+        android:layout_marginLeft="16px"
+        android:background="@drawable/bg_toast_style"
+        app:layout_auto_basewidth="height">
+
+        <ImageView
+            android:id="@+id/img_00"
+            android:layout_width="42px"
+            android:layout_height="38px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5px"
+            android:layout_marginTop="10px"
+            android:src="@mipmap/ic_shouye_gouwuche" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_00"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5px"
+            android:text="购物车"
+            android:textColor="#fefefe"
+            android:textSize="20px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_jiaru_goumai"
+        android:layout_width="match_parent"
+        android:layout_height="102px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/cl_background"
+        android:gravity="bottom"
+        android:visibility="visible">
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="2px"
+            android:layout_height="99px"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/ll_xiaoxi"
+            android:background="#dedede" />
+
+        <LinearLayout
+            android:id="@+id/ll_store"
+            android:layout_width="111px"
+            android:layout_height="99px"
+            android:layout_toRightOf="@+id/view"
+            android:background="@color/cl_white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18px"
+                android:background="@color/white"
+                android:src="@mipmap/ic_store" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5px"
+                android:layout_marginTop="5px"
+                android:text="店铺"
+                android:textSize="20px" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="2px"
+            android:layout_height="99px"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/ll_store"
+            android:background="#dedede" />
+
+        <TextView
+            android:id="@+id/tv_yixiajia"
+            android:layout_width="match_parent"
+            android:layout_height="99px"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="2px"
+            android:layout_toRightOf="@+id/ll_store"
+            android:background="@color/white"
+            android:gravity="center"
+            android:text="已下架"
+            android:textColor="@color/cl_666666"
+            android:textSize="34px" />
+
+        <LinearLayout
+            android:id="@+id/ll_button_all"
+            android:layout_width="match_parent"
+            android:layout_height="99px"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/ll_store"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btn_gouwuche_jiaru"
+                android:layout_width="0px"
+                android:layout_height="99px"
+                android:layout_weight="2"
+                android:background="@color/cl_ff8838"
+                android:text="加入购物车"
+                android:textColor="#fefefe"
+                android:textSize="36px" />
+
+            <Button
+                android:id="@+id/btn_gouwuche_liji_goumai"
+                android:layout_width="0px"
+                android:layout_height="99px"
+                android:layout_weight="2"
+                android:background="@color/cl_E33333"
+                android:text="立即购买"
+                android:textColor="#fefefe"
+                android:textSize="36px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_xiaoxi"
+            android:layout_width="111px"
+            android:layout_height="99px"
+            android:background="@color/cl_white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/ivChat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="18px"
+                android:background="@color/white"
+                android:src="@mipmap/ic_seller" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="5px"
+                android:layout_marginTop="5px"
+                android:text="客服"
+                android:textSize="20px" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar_white" />
+
+    <TextView
+        android:id="@+id/tv_xuanze"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_titlebar"
+        android:layout_marginBottom="20px"
+        android:layout_marginLeft="30px"
+        android:layout_marginTop="20px"
+        android:text="请选择退款或退货"
+        android:textColor="@color/cl_666666"
+        android:textSize="28px" />
+
+    <RelativeLayout
+        android:id="@+id/rl_tuikuan"
+        android:layout_width="match_parent"
+        android:layout_height="171px"
+        android:layout_below="@id/tv_xuanze"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="114px"
+            android:layout_marginTop="42px"
+            android:text="退款"
+            android:textColor="@color/cl_333333"
+            android:textSize="32px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="114px"
+            android:layout_marginTop="102px"
+            android:text="未收到货，或与卖家协商同意前提下申请。"
+            android:textColor="@color/cl_999999"
+            android:textSize="26px" />
+
+        <ImageView
+            android:layout_width="14px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:background="@mipmap/icon_thk_right" />
+
+        <ImageView
+            android:layout_width="57px"
+            android:layout_height="55px"
+            android:layout_marginLeft="29px"
+            android:layout_marginTop="58px"
+            android:src="@mipmap/icon_thk_tuikuan" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#EEEEEE" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tuihuo"
+        android:layout_width="match_parent"
+        android:layout_height="171px"
+        android:layout_below="@id/rl_tuikuan"
+        android:background="@color/white">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="114px"
+            android:layout_marginTop="42px"
+            android:text="退货"
+            android:textColor="@color/cl_333333"
+            android:textSize="32px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="114px"
+            android:layout_marginTop="102px"
+            android:text="已收到货，需要退还已收到的货物。"
+            android:textColor="@color/cl_999999"
+            android:textSize="26px" />
+
+        <ImageView
+            android:layout_width="14px"
+            android:layout_height="26px"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:background="@mipmap/icon_thk_right" />
+
+        <ImageView
+            android:layout_width="57px"
+            android:layout_height="55px"
+            android:layout_marginLeft="29px"
+            android:layout_marginTop="58px"
+            android:src="@mipmap/icon_thk_tuihuo" />
+    </RelativeLayout>
+
+
+</com.zyd.wlwsdk.autolayout.AutoRelativeLayout>

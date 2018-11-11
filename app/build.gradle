@@ -1,0 +1,98 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion '26.0.2'
+    defaultConfig {
+        applicationId "com.gloiot.hygo"
+        minSdkVersion 16
+        targetSdkVersion 25
+        versionCode 251
+        versionName "2.5.1"
+        multiDexEnabled true
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                includeCompileClasspath true
+            }
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+
+    buildTypes {
+        debug {
+            applicationIdSuffix "debug"
+            manifestPlaceholders = [package: "com.gloiot.hygo.debug"]
+        }
+        release {
+            manifestPlaceholders = [package: "com.gloiot.hygo"]
+            // 不显示Log
+            buildConfigField "boolean", "LOG_DEBUG", "false"
+            //混淆
+            minifyEnabled true
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            //加载默认混淆配置文件
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+
+apply plugin: 'org.greenrobot.greendao'
+
+greendao {
+    schemaVersion 1
+    daoPackage 'com.gloiot.hygo.server.db.gen'
+    targetGenDir 'src/main/java'
+}
+
+repositories {
+    flatDir { dirs '../chatsdk/libs','libs' }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    testCompile 'junit:junit:4.12'
+    compile project(':wlwsdk')
+    // greendao数据库
+    compile 'org.greenrobot:greendao:3.0.1'
+    compile 'org.greenrobot:greendao-generator:3.0.0'
+    //分类CoordinatorLayout
+    compile('com.android.support:support-v4:25.3.1') {
+        force = true;
+    }
+    //VerticalTabLayout
+    compile 'q.rorbin:VerticalTabLayout:1.1.0'
+    //商品详情里面的
+    compile 'com.zhy:flowlayout-lib:1.0.3'
+    //侧滑recyclerview
+    compile 'com.yanzhenjie:recyclerview-swipe:1.0.4'
+    //未读消息的小红点
+    compile 'q.rorbin:badgeview:1.1.0'
+    //dex分割，避免方法数超出限制
+    compile 'com.android.support:multidex:1.0.1'
+    // bugly
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    //省市区三级联动查询
+    compile 'liji.library.dev:citypickerview:1.0.0'
+    compile project(':chatsdk')
+    //中文转拼音
+    compile 'com.belerweb:pinyin4j:2.5.0'
+
+    compile 'com.githang:status-bar-compat:latest.integration'
+}

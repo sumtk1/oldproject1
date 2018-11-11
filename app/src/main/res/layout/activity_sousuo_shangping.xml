@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_white">
+
+    <ListView
+        android:id="@+id/lv_sousuo_tishi_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/in_sousuo"
+        android:background="@color/cl_background"
+        android:divider="@null"
+        android:visibility="visible" />
+
+    <include
+        android:id="@+id/in_sousuo"
+        layout="@layout/item_sousuo" />
+</RelativeLayout>

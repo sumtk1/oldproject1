@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="500px"
+            android:layout_height="800px"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/rebate_imv"
+                android:layout_width="500px"
+                android:layout_height="800px"
+                app:layout_auto_basewidth="height" />
+
+            <ImageButton
+                android:id="@+id/dialog_imageButton"
+                android:layout_width="280px"
+                android:layout_height="64px"
+                android:visibility="gone"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="142px"
+                android:background="@mipmap/ic_wode_youhuiquan_lingqu" />
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/dialog_guanbi"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:padding="35px"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_wode_youhuiquan_guanbi" />
+    </RelativeLayout>
+
+</RelativeLayout>

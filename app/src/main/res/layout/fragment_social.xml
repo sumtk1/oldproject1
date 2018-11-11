@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_gray"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/view_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="45px"
+        android:background="@color/colorPrimary"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="100px"
+        android:background="#ffffff">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="消息"
+            android:textColor="#333333"
+            android:textSize="36px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_alignParentBottom="true"
+            android:background="#CFCFCF" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_network_error"
+        android:layout_width="match_parent"
+        android:layout_height="50px"
+        android:background="#F0A1AD"
+        android:gravity="center_vertical"
+        android:text="   当前网络不可用，请检查当前网络"
+        android:textColor="@color/white"
+        android:textSize="28px"
+        android:visibility="gone"/>
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="84px"-->
+    <!--android:background="@color/white"-->
+    <!--android:visibility="gone">-->
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/rl_search"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="60px"-->
+    <!--android:layout_marginLeft="30px"-->
+    <!--android:layout_marginRight="30px"-->
+    <!--android:layout_marginTop="12px"-->
+    <!--android:background="@drawable/bg_f3f3f3_2">-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_search"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="10px"-->
+    <!--android:src="@mipmap/common_icon_search" />-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_delete"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentRight="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:padding="10px"-->
+    <!--android:src="@mipmap/common_icon_delete"-->
+    <!--android:visibility="gone" />-->
+
+    <!--<EditText-->
+    <!--android:id="@+id/et_search"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="10px"-->
+    <!--android:layout_toLeftOf="@id/iv_delete"-->
+    <!--android:layout_toRightOf="@id/iv_search"-->
+    <!--android:background="@null"-->
+    <!--android:ellipsize="end"-->
+    <!--android:hint="搜索"-->
+    <!--android:singleLine="true"-->
+    <!--android:text=""-->
+    <!--android:textColor="#333333"-->
+    <!--android:textColorHint="#999999"-->
+    <!--android:textSize="26px" />-->
+    <!--</RelativeLayout>-->
+    <!--</RelativeLayout>-->
+
+    <LinearLayout
+        android:id="@+id/ll_nodata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_titlebar"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:layout_width="238px"
+            android:layout_height="212px"
+            android:layout_marginTop="350px"
+            android:src="@mipmap/ic_no_message" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:text="暂时没有新消息"
+            android:textColor="#666666"
+            android:textSize="24px" />
+    </LinearLayout>
+
+    <com.yanzhenjie.recyclerview.swipe.SwipeMenuRecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/bg_color"
+        android:visibility="visible" />
+</com.zyd.wlwsdk.autolayout.AutoLinearLayout>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar" />
+
+    <TextView
+        android:id="@+id/tv_contacts_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_titlebar"
+        android:layout_marginLeft="32px"
+        android:layout_marginTop="15px"
+        android:text="我的服务商"
+        android:textColor="#555555"
+        android:textSize="32px" />
+
+    <LinearLayout
+        android:id="@+id/ll_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_contacts_01"
+        android:layout_marginTop="15px"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_01"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="32px"
+                android:text="姓名："
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_contacts_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="32px"
+                android:layout_toRightOf="@+id/tv_01"
+                android:text=""
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <View style="@style/item_view_new" />
+
+        <RelativeLayout
+            android:id="@+id/rl_02"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="32px"
+                android:text="手机号："
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_contacts_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="32px"
+                android:layout_toRightOf="@+id/tv_02"
+                android:text=""
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <View style="@style/item_view_new" />
+
+        <RelativeLayout
+            android:id="@+id/rl_03"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="32px"
+                android:text="类别："
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_contacts_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="32px"
+                android:layout_toRightOf="@+id/tv_03"
+                android:text=""
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_contacts_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_01"
+        android:layout_marginLeft="32px"
+        android:layout_marginTop="15px"
+        android:text="我推荐的人"
+        android:textColor="#555555"
+        android:textSize="32px"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tv_listview_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_contacts_02"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="120px"
+        android:text="" />
+
+</RelativeLayout>

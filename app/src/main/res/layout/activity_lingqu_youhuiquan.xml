@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_lingqu_youhuiquan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gloiot.hygo.ui.activity.my.youhuiquan.LingQuYouHuiQuanActivity">
+
+    <include layout="@layout/include_titlebar" />
+
+    <ListView
+        android:id="@+id/lv_lingqu_youhuiquan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle_rl"
+        android:layout_marginTop="12px"
+        android:divider="@null"
+        android:visibility="gone" />
+</RelativeLayout>

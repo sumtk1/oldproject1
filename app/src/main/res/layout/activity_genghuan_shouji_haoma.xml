@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.gloiot.hygo.ui.activity.my.shezhi.guanlianshouji.GenghuanShoujiHaoma01Activity">
+
+    <include layout="@layout/include_titlebar" />
+
+    <ImageView
+        android:layout_width="174px"
+        android:layout_height="174px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="90px"
+        android:src="@mipmap/shouji"
+        app:layout_auto_basewidth="height" />
+
+    <TextView
+        android:id="@+id/tv_original_phonenum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60px"
+        android:text=""
+        android:textColor="@color/black"
+        android:textSize="48px" />
+
+    <Button
+        android:id="@+id/btn_next"
+        style="@style/btn_system_style"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="88px"
+        android:gravity="center"
+        android:text="更换手机号" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="28px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="3px"
+            android:text="*"
+            android:textColor="#F84838"
+            android:textSize="26px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="更换手机号后，登录账号为首次注册手机号保持不变，该账号关联的手机号变更为修改之后的手机号"
+            android:textColor="#666666"
+            android:textSize="26px" />
+
+    </LinearLayout>
+
+</LinearLayout>

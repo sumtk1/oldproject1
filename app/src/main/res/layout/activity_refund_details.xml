@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_background">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar_white" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_titlebar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rl_0"
+                android:layout_width="match_parent"
+                android:layout_height="190px"
+                android:layout_marginBottom="24px"
+                android:background="@drawable/bg_btn_violet_rect"
+                android:gravity="center_vertical"
+                android:paddingLeft="58px"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:id="@+id/tv_tuikuan_xiangqing_dengdaishangjia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="请等待商家处理"
+                    android:textColor="@color/cl_white"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:id="@+id/tv_tuikuan_xiangqing_daojishi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_tuikuan_xiangqing_dengdaishangjia"
+                    android:layout_marginTop="24px"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="还剩 天  小时  分"
+                    android:textColor="@color/cl_white"
+                    android:textSize="26px" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:background="@color/white">
+
+                <ImageView
+                    android:id="@+id/iv_01"
+                    android:layout_width="36px"
+                    android:layout_height="36px"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="24px"
+                    android:src="@mipmap/icon_thk_ok" />
+
+                <TextView
+                    android:id="@+id/shouhou_zhuangtai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="16px"
+                    android:layout_toRightOf="@+id/iv_01"
+                    android:text=""
+                    android:textColor="@color/cl_333333"
+                    android:textSize="28px" />
+
+                <include layout="@layout/include_view_qian" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24px"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingLeft="24px"
+                android:paddingRight="30px">
+
+                <RelativeLayout
+                    android:id="@+id/rl_shouhou_xiangqing_kuaidigongsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_shouhou_xiangqing_kuaidigongsi_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="快递公司："
+                        android:textColor="@color/cl_666666"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:id="@+id/tv_shouhou_xiangqing_kuaidigongsi"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_shouhou_xiangqing_kuaidigongsi_1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="@color/cl_666666"
+                        android:textSize="24px" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rl_shouhou_xiangqing_kuaididanhao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginTop="24px"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/tv_shouhou_xiangqing_kuaididanhao_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="快递单号："
+                        android:textColor="@color/cl_666666"
+                        android:textSize="24px" />
+
+                    <TextView
+                        android:id="@+id/tv_shouhou_xiangqing_kuaididanhao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/tv_shouhou_xiangqing_kuaididanhao_1"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text=""
+                        android:textColor="@color/cl_666666"
+                        android:textSize="24px" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20px"
+                    android:text="·如果商家同意：申请将达成并退款至你的支付账户"
+                    android:textColor="@color/cl_666666"
+                    android:textSize="24px"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_02"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_01"
+                    android:layout_marginTop="24px"
+                    android:text="·如果商家拒绝：将需要你需要修改退款申请；你也可撤销申请"
+                    android:textColor="@color/cl_666666"
+                    android:textSize="24px"
+                    android:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/tv_03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_02"
+                    android:layout_marginBottom="20px"
+                    android:layout_marginTop="24px"
+                    android:text="·如果商家未处理：超过02天23时申请将自动关闭"
+                    android:textColor="@color/cl_666666"
+                    android:textSize="24px"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <Button
+                        android:id="@+id/bt_wuliu"
+                        style="@style/btn_style_01"
+                        android:layout_width="150px"
+                        android:layout_height="58px"
+                        android:layout_marginBottom="16px"
+                        android:layout_marginTop="10px"
+                        android:layout_toLeftOf="@+id/bt_kefu"
+                        android:text="查看物流"
+                        android:textColor="@color/cl_666666"
+                        android:textSize="26px"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/bt_kefu"
+                        style="@style/btn_style_01"
+                        android:layout_width="150px"
+                        android:layout_height="58px"
+                        android:layout_marginBottom="16px"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginTop="10px"
+                        android:layout_toLeftOf="@+id/bt_repeal"
+                        android:text="客服介入"
+                        android:textColor="@color/cl_666666"
+                        android:textSize="26px"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/bt_repeal"
+                        style="@style/btn_style_03"
+                        android:layout_width="150px"
+                        android:layout_height="58px"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginBottom="16px"
+                        android:layout_marginLeft="20px"
+                        android:layout_marginTop="10px"
+                        android:text="撤销申请"
+                        android:textColor="@color/cl_ff436f"
+                        android:textSize="26px" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <include layout="@layout/layout_tuikuankuohuo_dingdan_xinxi" />
+
+        </LinearLayout>
+    </ScrollView>
+</com.zyd.wlwsdk.autolayout.AutoRelativeLayout>

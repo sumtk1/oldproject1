@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shouhou_success"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gloiot.hygo.ui.activity.my.shouhou.ShouHouSuccessActivity">
+
+    <include layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle_rl"
+        android:background="@color/cl_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cl_white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="24px"
+                android:paddingTop="35px">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_shouhou_success" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34px"
+                    android:text="商家已同意退款"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:id="@+id/tv_shouhou_success_miaoshu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="46px"
+                    android:text="钱款将原路返还至您的       ，视系统不同退款到账时间为2-7个工作日"
+                    android:textColor="@color/cl_666666"
+                    android:textSize="26px" />
+            </LinearLayout>
+
+            <include layout="@layout/layout_tuikuankuohuo_dingdan_xinxi" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>

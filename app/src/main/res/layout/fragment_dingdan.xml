@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_background"
+    tools:context="com.gloiot.hygo.ui.activity.shopping.wodedingdan.DingdanFragment">
+
+
+    <ImageView
+        android:id="@+id/iv_wodedingdan_meiyoudingdan"
+        android:layout_width="140px"
+        android:layout_height="150px"
+        android:layout_above="@+id/tv_wodedingdan_meiyoudingdan"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:src="@mipmap/ic_dingdan_wu"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/tv_wodedingdan_meiyoudingdan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_wodedingdan_quguangguang"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="60px"
+        android:text="您还没相关的订单~"
+        android:textColor="@color/cl_999999"
+        android:textSize="34px"
+        android:visibility="visible" />
+
+    <com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/ptrl_wode_dingdan"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/load_head" />
+
+        <com.zyd.wlwsdk.widge.pulltorefresh.PullableListView
+            android:id="@+id/pull_wode_dingdan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:scrollbars="none" />
+
+        <include layout="@layout/load_more" />
+    </com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_wodedingdan_quguangguang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal"
+        android:paddingTop="30px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/tv_wodedingdan_quguangguang"
+            android:text="去"
+            android:textColor="@color/cl_2b9ced"
+            android:textSize="32px"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tv_wodedingdan_quguangguang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:paddingLeft="20px"
+            android:text="逛逛吧~"
+            android:textColor="@color/cl_2b9ced"
+            android:textSize="32px"
+            android:visibility="visible" />
+
+        <View
+            android:layout_width="90px"
+            android:layout_height="2px"
+            android:layout_below="@+id/tv_wodedingdan_quguangguang"
+            android:layout_centerHorizontal="true"
+            android:background="@color/cl_2b9ced"
+            android:paddingTop="10px" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

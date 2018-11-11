@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_dingdan_chexiao"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gloiot.hygo.ui.activity.my.shouhou.ShouHouChexiaoActivity">
+
+    <include layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle_rl"
+        android:background="@color/cl_background">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cl_white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="24px"
+                android:paddingTop="30px">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_shouhou_callback" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34px"
+                    android:text="订单已撤销"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="30px" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_marginBottom="24px"
+                android:layout_marginTop="24px"
+                android:background="@color/cl_white"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="因你撤销退款申请，退款已关闭"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="28px" />
+
+                <Button
+                    android:id="@+id/btn_shouhou_chexiao_zaicishenqing"
+                    style="@style/btn_style_03"
+                    android:layout_width="140px"
+                    android:layout_height="56px"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="再次申请"
+                    android:textColor="@color/cl_ff436f"
+                    android:textSize="26px" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/layout_tuikuankuohuo_dingdan_xinxi" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

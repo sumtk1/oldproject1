@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.gloiot.hygo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取机型信息权限 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="org.simalliance.openmobileapi.SMARTCARD" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <uses-feature android:name="android.hardware.nfc.hce" />
+
+    <application
+        android:name=".ui.App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="design_width"
+            android:value="720" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+        <meta-data
+            android:name="package"
+            android:value="${package}" />
+
+        <activity android:name=".ui.activity.login.WelcomeActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- 微信信息 -->
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <!-- 微信支付 -->
+        <activity
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.activity.login.LoginActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/activityTheme" />
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".ui.activity.login.GuideActivity" />
+        <activity
+            android:name=".ui.activity.login.WangjimimaActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".ui.activity.my.shezhi.SheZhiActivity"
+            android:launchMode="singleTask" />
+        <activity android:name=".ui.activity.my.qianbao.JiFenQianBaoActivity" />
+        <activity android:name=".ui.activity.my.shezhi.XiuGaiMiMaActivity" />
+        <activity
+            android:name=".ui.activity.my.yinhangka.BangDingYinHangKaActivity"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity android:name=".ui.activity.my.ziliao.ZhiLiaoActivity" />
+        <activity android:name=".ui.activity.my.qianbao.JiFenChongZhiActivity" />
+        <activity android:name=".ui.activity.my.qianbao.JiFenChongZhiMingXiActivity" />
+        <activity
+            android:name=".ui.activity.web.WebActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:hardwareAccelerated="true" />
+        <activity android:name=".ui.activity.my.ziliao.FenXiangEWeiMaActivity" />
+        <activity android:name=".ui.activity.SaoMiaoActivity" />
+        <activity android:name=".ui.activity.my.ziliao.shimingrenzheng.RenZheng01Activity" />
+        <activity android:name=".ui.activity.my.ziliao.shimingrenzheng.RenZheng03Activity" />
+        <activity android:name=".ui.activity.my.ziliao.SingleLineInputActivity" />
+        <activity android:name=".ui.activity.my.yinhangka.WoDeYinHangKaActivity" />
+        <activity android:name=".ui.activity.my.qianbao.HongliTiXianActivity" />
+        <activity android:name=".ui.activity.my.qianbao.XuanZeTiXianActivity" />
+        <activity android:name=".ui.activity.SelectPCActivity" />
+        <activity android:name=".ui.activity.gesturelock.Activity_SetGestureLock" />
+        <activity android:name=".ui.activity.gesturelock.Activity_GetGestureLock" />
+        <activity android:name=".ui.activity.my.yijianfankui.YiJianFanKuiActivity" />
+        <activity android:name=".ui.activity.my.WoDeRenMaiActivity" />
+        <activity android:name=".ui.activity.my.YouHuiQuanActivity" />
+        <activity android:name=".ui.activity.my.qianbao.HongLiJiBenActivity" />
+        <activity android:name=".ui.activity.my.qianbao.ZhuanrangJifenActivity" />
+        <activity android:name=".ui.activity.my.qianbao.ZhuanRangJiFenMingXiActivity" />
+        <activity android:name=".ui.activity.my.shoukuan.WoYaoShoukuanActivity" />
+        <activity android:name=".ui.activity.my.shoukuan.ShoukuanJiLuActivity" />
+        <activity android:name=".ui.activity.my.shouhou.TuiKuanActivity" />
+        <activity android:name=".ui.activity.my.shouhou.TuiKuanXiangQingActivity" />
+        <activity android:name=".ui.activity.my.shouhou.TuikuanOrTuihuo" />
+        <activity android:name=".ui.activity.my.shouhou.ShouHouActivity" />
+        <activity android:name=".ui.activity.login.WXWanshanZiLiaoActivity" />
+        <activity android:name=".ui.activity.login.SheZhiMiMaActivity" />
+        <activity
+            android:name=".ui.activity.shopping.SousuoShangpingActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity
+            android:name=".ui.activity.shopping.fenlei.FenleiActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".ui.activity.shopping.fenlei.FenLeiSonActivity"
+            android:windowSoftInputMode="stateHidden|stateUnchanged" />
+        <activity android:name=".ui.activity.shopping.JinriTejiaActivity" />
+        <activity
+            android:name=".ui.activity.shopping.ShangPinXiangQingActivity"
+            android:windowSoftInputMode="stateAlwaysHidden" />
+        <activity android:name=".ui.activity.shopping.gouwuche.QuerenDingdanActivity" />
+        <activity android:name=".ui.activity.shopping.dizhi.XiugaiShouhuoDizhiActivity" />
+        <activity android:name=".ui.activity.my.qianbao.HongliTixianMingxiActivity" />
+        <activity android:name=".ui.activity.shopping.gouwuche.GouWuCheActivity" />
+        <activity android:name=".ui.activity.shopping.wodeshoucang.ShouCangActivity" />
+        <activity android:name=".ui.activity.shopping.wodedingdan.WodeDingdanActivity" />
+        <activity android:name=".ui.activity.shopping.wodedingdan.DingdanXiangqingActivity" />
+        <activity android:name=".ui.activity.shopping.wodedingdan.ChakanWuliuActicity" />
+        <activity android:name=".ui.activity.shopping.wodedingdan.FaBiaoPingjiaActivity" />
+        <activity android:name=".ui.activity.shopping.YonghuPingjiaActivity" />
+        <activity android:name=".ui.activity.my.qianbao.JifenbaoZhanghuActivity" />
+        <activity android:name=".ui.activity.my.qianbao.ShangJinBiZhangHuActivity" />
+        <activity android:name=".ui.activity.my.shezhi.guanlianshouji.GenghuanShoujiHaoma01Activity" />
+        <activity android:name=".ui.activity.my.shezhi.guanlianshouji.GenghuanShoujiHaoma02Activity" />
+        <activity android:name=".ui.activity.my.shezhi.guanlianshouji.TianxieYanzhengmaActivity" />
+        <activity android:name=".ui.activity.my.shezhi.guanlianshouji.XiugaiChenggongActivity" />
+        <activity android:name=".ui.activity.shopping.dizhi.ShouhuoDizhiActivity" />
+        <activity android:name=".ui.activity.my.qianbao.YoufeizhanghuActivity" />
+        <activity
+            android:name=".ui.activity.shopping.dizhi.BianjiShouhuoDizhiActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".ui.activity.shopping.gouwuche.SelectShouhuoAddressActivity" />
+        <activity android:name=".ui.activity.social.SystemMessageActivity" />
+        <activity android:name=".ui.activity.social.WuLiuMessageActivity" />
+        <activity android:name=".ui.activity.social.ConversationActivity" />
+        <activity android:name=".ui.activity.shopping.gouwuche.QQGQueRenDingDanActivity" />
+        <activity android:name=".ui.activity.shopping.gouwuche.ShenFenRenZhengXiaDanActivity" />
+        <activity android:name=".ui.activity.login.RegisterActivity" />
+        <activity
+            android:name=".ui.activity.login.NumLoginActivity"
+            android:windowSoftInputMode="stateVisible" />
+        <activity android:name=".ui.activity.listwithheard.SelectCountriesActivity" />
+        <activity android:name=".ui.activity.my.kefu.KeHuZhongXinActivity" />
+        <activity android:name=".ui.activity.my.kefu.SelectKeFuActivity" />
+        <activity android:name=".ui.activity.payment.SettlementActivity" />
+        <activity android:name=".ui.activity.payment.PaymentResultsActivity" />
+        <activity android:name=".ui.activity.my.MyBillActivity" />
+        <activity android:name=".ui.activity.social.ZhangDanMessageActivity" />
+        <activity android:name=".ui.activity.my.XiangQingActivity" />
+        <activity android:name=".ui.activity.my.qianbao.SaoMaChongZhiActivity" />
+        <activity android:name=".ui.activity.my.qianbao.SaoMaChongZhiJiLuActivity" />
+        <activity android:name=".ui.activity.my.youhuiquan.ShiYongYouHuiQuanActivity" />
+        <activity android:name=".ui.activity.my.youhuiquan.WoDeYouHuiQuanActivity" />
+        <activity android:name=".ui.activity.my.youhuiquan.LingQuYouHuiQuanActivity" />
+        <activity
+            android:name=".ui.activity.shopping.dianpu.ShangJiaDianPuActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".ui.activity.shopping.dianpu.GuanZhuDianPuActivity" />
+        <activity
+            android:name="com.unionpay.uppay.PayActivity"
+            android:configChanges="orientation|keyboardHidden|keyboard"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.unionpay.UPPayWapActivity"
+            android:configChanges="orientation|keyboardHidden|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".ui.activity.my.shouhou.ShouHouChexiaoActivity" />
+        <activity android:name=".ui.activity.my.shouhou.ShouHouSuccessActivity" />
+        <activity android:name=".ui.activity.my.shouhou.ShouHouFailActivity" />
+        <activity android:name=".ui.activity.my.shouhou.ShouHouFanKuiActivity" />
+        <activity android:name=".ui.activity.my.shouhou.ShouHouTuiHuoActivity" />
+        <activity android:name=".ui.activity.my.shouhou.ShouHouDingDanXiangQingActivity" />
+        <activity android:name=".ui.activity.my.yijianfankui.LiShiFanKuiActivity" />
+        <activity android:name=".ui.activity.my.yijianfankui.LiShiFanKuiXiangQingActivity" />
+        <activity android:name=".ui.activity.my.kefu.RenGongKeFuActivity" />
+        <activity android:name=".ui.activity.my.zhifubao.WoDeZhiFuBaoActivity" />
+        <activity android:name=".ui.activity.my.zhifubao.AddAlipayActivity" />
+        <activity android:name=".ui.activity.my.shezhi.ZhangHaoQieHuanActivity"></activity>
+    </application>
+
+</manifest>

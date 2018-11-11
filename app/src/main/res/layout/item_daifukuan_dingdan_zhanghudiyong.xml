@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.zyd.wlwsdk.autolayout.AutoRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_item_daifukuan_dingdan_zhanghudiyong"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_marginTop="1px"
+            android:background="@color/cl_white"
+            android:paddingLeft="30px"
+            android:paddingRight="30px">
+
+
+            <TextView
+                android:id="@+id/tv_item_dingdan_zhanghudiyong"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="10px"
+                android:layout_toLeftOf="@+id/tv_item_dingdan_dingyongjiner"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="请选择抵用账户"
+                android:textColor="@color/cl_666666"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/tv_item_dingdan_dingyongjiner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5px"
+                android:layout_toLeftOf="@+id/iv_more"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="#ff0000"
+                android:textSize="28px" />
+
+            <ImageView
+                android:id="@+id/iv_more"
+                android:layout_width="24px"
+                android:layout_height="24px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/ic_arrow_right" />
+
+            <!--<Switch-->
+                <!--android:id="@+id/switch_item_dingdan_zhanghudiyong"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_centerVertical="true"-->
+                <!--android:layout_gravity="center_horizontal"-->
+                <!--android:checked="false"-->
+                <!--android:switchMinWidth="80px"-->
+                <!--android:textOff=""-->
+                <!--android:textOn=""-->
+                <!--android:thumb="@drawable/switch_thumb_select"-->
+                <!--android:track="@drawable/switch_track_select" />-->
+
+        </RelativeLayout>
+
+    </com.zyd.wlwsdk.autolayout.AutoRelativeLayout>
+</LinearLayout>

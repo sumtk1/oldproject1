@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gloiot.hygo.ui.activity.my.qianbao.JifenbaoZhanghuActivity">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar" />
+
+    <com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/pulltorefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/in_titlebar">
+
+        <include layout="@layout/load_head" />
+
+        <com.zyd.wlwsdk.widge.pulltorefresh.PullableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <LinearLayout
+                    android:id="@+id/ll_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="214px"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_jifenbao_jifenbaoyue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60px"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="0.00"
+                                android:textColor="@color/cl_999999"
+                                android:textSize="40px" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="24px"
+                                android:text="积分宝余额"
+                                android:textColor="#666666"
+                                android:textSize="28px" />
+
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1px"
+                            android:layout_height="80px"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/color_bg_gray" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_jifenbao_kexiaofeiedu"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="60px"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="0.00"
+                                android:textColor="@color/cl_2b9ced"
+                                android:textSize="40px" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="24px"
+                                android:text="可消费额度"
+                                android:textColor="#666666"
+                                android:textSize="28px" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@color/color_bg_gray" />
+
+                    <TextView
+                        android:id="@+id/tv_explain"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:lineSpacingExtra="10px"
+                        android:minHeight="152px"
+                        android:paddingBottom="20px"
+                        android:paddingLeft="30px"
+                        android:paddingRight="30px"
+                        android:paddingTop="20px"
+                        android:text=""
+                        android:textColor="#999999"
+                        android:textSize="24px" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_jifenbao_jilu"
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:layout_below="@id/ll_top"
+                    android:layout_marginTop="20px"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="30px"
+                    android:text="积分记录"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="28px" />
+
+                <ListView
+                    android:id="@+id/listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_jifenbao_jilu"
+                    android:layout_marginTop="1px"
+                    android:background="@color/cl_white"
+                    android:divider="#e0e0e0"
+                    android:dividerHeight="1px" />
+
+            </RelativeLayout>
+        </com.zyd.wlwsdk.widge.pulltorefresh.PullableScrollView>
+
+        <include layout="@layout/load_more" />
+
+    </com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout>
+
+</RelativeLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shouhou_tuihuo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gloiot.hygo.ui.activity.my.shouhou.ShouHouTuiHuoActivity">
+
+    <include layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle_rl"
+        android:fillViewport="true"
+        android:background="@color/cl_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/ll_shouhou_tuihuo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/cl_white"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="24px"
+                android:paddingTop="35px">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/ic_shouhou_success" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="34px"
+                    android:text="商家已同意退货申请"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="30px" />
+
+                <TextView
+                    android:id="@+id/tv_shouhou_tuihuo_miaoshu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30px"
+                    android:layout_marginRight="30px"
+                    android:layout_marginTop="22px"
+                    android:gravity="center"
+                    android:text="6天10时50分未提交订单自动关闭"
+                    android:textColor="@color/cl_666666"
+                    android:textSize="26px" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_shouhou_tuihuo"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/ll_shouhou_tuihuo"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24px"
+                android:background="@color/cl_white"
+                android:paddingBottom="28px"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:paddingTop="28px"
+                android:text="卖家收货信息"
+                android:textColor="@color/cl_333333"
+                android:textSize="28px" />
+
+            <RelativeLayout
+                android:id="@+id/rl_shouhou_tuihuo"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/tv_shouhou_tuihuo"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1px"
+                android:background="@color/cl_white"
+                android:paddingBottom="24px"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:paddingTop="24px">
+
+                <TextView
+                    android:id="@+id/tv_shouhou_tuihuo_shouhoren_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收货人："
+                    android:textColor="@color/cl_333333"
+                    android:textSize="26px" />
+
+                <TextView
+                    android:id="@+id/tv_shouhou_tuihuo_shouhoren"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_shouhou_tuihuo_shouhoren_1"
+                    android:text=""
+                    android:textColor="@color/cl_333333"
+                    android:textSize="26px" />
+
+                <TextView
+                    android:id="@+id/tv_shouhou_tuihuo_lianxidianhua_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_shouhou_tuihuo_shouhoren_1"
+                    android:layout_marginTop="20px"
+                    android:text="联系电话："
+                    android:textColor="@color/cl_333333"
+                    android:textSize="26px" />
+
+                <TextView
+                    android:id="@+id/tv_shouhou_tuihuo_lianxidianhua"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_shouhou_tuihuo_shouhoren_1"
+                    android:layout_marginTop="20px"
+                    android:layout_toRightOf="@+id/tv_shouhou_tuihuo_lianxidianhua_1"
+                    android:text=""
+                    android:textColor="@color/cl_333333"
+                    android:textSize="26px" />
+
+                <TextView
+                    android:id="@+id/tv_shouhou_tuihuo_shouhuodizhi_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_shouhou_tuihuo_lianxidianhua_1"
+                    android:layout_marginTop="20px"
+                    android:text="收货地址："
+                    android:textColor="@color/cl_333333"
+                    android:textSize="26px" />
+
+                <TextView
+                    android:id="@+id/tv_shouhou_tuihuo_shouhuodizhi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv_shouhou_tuihuo_lianxidianhua_1"
+                    android:layout_marginTop="20px"
+                    android:layout_toRightOf="@+id/tv_shouhou_tuihuo_shouhuodizhi_1"
+                    android:text=""
+                    android:textColor="@color/cl_333333"
+                    android:textSize="26px" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_shouhou_tuihuo_1"
+                android:layout_width="match_parent"
+                android:layout_below="@+id/rl_shouhou_tuihuo"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24px"
+                android:background="@color/cl_white"
+                android:paddingBottom="28px"
+                android:paddingLeft="30px"
+                android:paddingRight="30px"
+                android:paddingTop="28px"
+                android:text="用户发货信息"
+                android:textColor="@color/cl_333333"
+                android:textSize="28px" />
+
+            <LinearLayout
+                android:id="@+id/ll_shouhou_tuihuo_1"
+                android:layout_below="@+id/tv_shouhou_tuihuo_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1px"
+                android:background="@color/cl_white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_shouhou_tuihuo_kuaidigongsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1px"
+                    android:background="@null"
+                    android:hint="请填写快递公司"
+                    android:paddingBottom="26px"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px"
+                    android:paddingTop="26px"
+                    android:textColorHint="@color/cl_999999"
+                    android:textColor="@color/black"
+                    android:textSize="26px" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:background="@color/cl_background"
+                    android:paddingLeft="30px" />
+
+                <EditText
+                    android:id="@+id/tv_shouhou_tuihuo_kuaididanhao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="1px"
+                    android:background="@null"
+                    android:hint="请填写快递单号"
+                    android:paddingBottom="26px"
+                    android:paddingLeft="30px"
+                    android:paddingRight="30px"
+                    android:paddingTop="26px"
+                    android:textColorHint="@color/cl_999999"
+                    android:textColor="@color/black"
+                    android:textSize="26px" />
+            </LinearLayout>
+
+
+            <Button
+                android:id="@+id/tv_shouhou_tuihuo_tijiao"
+                style="@style/btn_system_style_rect"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_height="96px"
+                android:layout_marginTop="120px"
+                android:layout_gravity="bottom"
+                android:text="提交" />
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

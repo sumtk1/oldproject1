@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="AutoRequestEditText">
+        <attr name="aret_text_num" format="integer"/>
+        <attr name="aret_desc" format="string"/>
+        <attr name="aret_padding_left" format="dimension"/>
+        <attr name="aret_hint" format="string"/>
+    </declare-styleable>
+
+    <!-- 手势锁 -->
+    <attr name="color_no_finger_inner_circle" format="color" />
+    <attr name="color_no_finger_outer_circle" format="color" />
+    <attr name="color_finger_on" format="color" />
+    <attr name="color_finger_up" format="color" />
+    <attr name="count" format="integer" />
+    <attr name="tryTimes" format="integer" />
+
+    <declare-styleable name="GestureLockViewGroup">
+        <attr name="color_no_finger_inner_circle" />
+        <attr name="color_no_finger_outer_circle" />
+        <attr name="color_finger_on" />
+        <attr name="color_finger_up" />
+        <attr name="count" />
+        <attr name="tryTimes" />
+    </declare-styleable>
+
+    <dimen name="divider_height">30px</dimen>
+</resources>

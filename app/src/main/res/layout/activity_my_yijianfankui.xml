@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_gray"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:fillViewport="true"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rl_01"
+                android:layout_width="match_parent"
+                android:layout_height="84px">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:text="请选择意见反馈的类型"
+                    android:textColor="#999999"
+                    android:textSize="26px" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_00"
+                android:layout_width="match_parent"
+                android:layout_height="194px"
+                android:layout_below="@id/rl_01">
+
+                <RelativeLayout
+                    android:id="@+id/ll_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="96px"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="48px"
+                        android:text="功能异常"
+                        android:textColor="#666666"
+                        android:textSize="28px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="50px"
+                        android:layout_toRightOf="@id/tv_01"
+                        android:text="不能正常使用正常功能"
+                        android:textColor="#666666"
+                        android:textSize="28px" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_alignParentBottom="true"
+                        android:background="#e0e0e0" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/rl_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="96px"
+                    android:layout_below="@id/ll_02"
+                    android:layout_marginTop="2px"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:id="@+id/tv_02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="48px"
+                        android:text="其他问题"
+                        android:textColor="#666666"
+                        android:textSize="28px" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="50px"
+                        android:text="用得不爽，其他意见都提过来"
+                        android:textColor="#666666"
+                        android:textSize="28px" />
+                </LinearLayout>
+
+                <RadioGroup
+                    android:id="@+id/rg_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical"
+                    android:weightSum="0">
+
+                    <RadioButton
+                        android:id="@+id/rb_01"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:button="@drawable/bg_checkbox"
+                        android:gravity="center_vertical" />
+
+                    <RadioButton
+                        android:id="@+id/rb_02"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:button="@drawable/bg_checkbox"
+                        android:gravity="center_vertical" />
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_04"
+                android:layout_width="match_parent"
+                android:layout_height="84px"
+                android:layout_below="@id/rl_00">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="30px"
+                    android:text="问题与意见"
+                    android:textColor="#999999"
+                    android:textSize="26px" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rl_04"
+                android:background="#ffffff"
+                android:orientation="vertical"
+                android:paddingBottom="30px">
+
+                <EditText
+                    android:id="@+id/et_opinion"
+                    android:layout_width="match_parent"
+                    android:layout_height="156px"
+                    android:background="@null"
+                    android:gravity="top"
+                    android:hint="请简述你的问题和意见(50字以内)"
+                    android:padding="30px"
+                    android:textColor="#666666"
+                    android:textColorHint="#bbbbbb"
+                    android:textSize="28px" />
+
+                <com.gloiot.hygo.widget.NoSlipGridview
+                    android:id="@+id/gd_yijianfankui_pictures"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35px"
+                    android:layout_marginTop="24px"
+                    android:cacheColorHint="@android:color/transparent"
+                    android:clipChildren="true"
+                    android:gravity="center"
+                    android:horizontalSpacing="3px"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="4"
+                    android:verticalSpacing="4px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/rl_content"
+                android:layout_marginRight="30px">
+
+                <TextView
+                    android:id="@+id/tv_suggestion_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="#666666"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="/"
+                    android:textColor="#666666"
+                    android:textSize="28px" />
+
+                <TextView
+                    android:id="@+id/tv_suggestion_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="50"
+                    android:textColor="#666666"
+                    android:textSize="28px" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btn_commit"
+                style="@style/btn_system_style"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="90px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:text="提 交" />
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

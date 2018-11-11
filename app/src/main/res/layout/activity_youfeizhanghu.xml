@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_shangjinbi_zhanghu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gloiot.hygo.ui.activity.my.qianbao.YoufeizhanghuActivity">
+
+    <include layout="@layout/include_titlebar" />
+
+    <com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/pulltorefreshlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle_rl">
+
+        <include layout="@layout/load_head" />
+
+        <com.zyd.wlwsdk.widge.pulltorefresh.PullableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true">
+
+                <RelativeLayout
+                    android:id="@+id/rl_youfeizhanghu_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/cl_white"
+                    android:paddingBottom="20px">
+
+                    <TextView
+                        android:id="@+id/tv_youfeizhanghu_jifen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="64px"
+                        android:gravity="center"
+                        android:text="0.00"
+                        android:textColor="@color/cl_2b9ced"
+                        android:textSize="56px" />
+
+                    <TextView
+                        android:id="@+id/tv_youfeizhanghu_biaoti"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tv_youfeizhanghu_jifen"
+                        android:layout_marginTop="24px"
+                        android:gravity="center"
+                        android:text="积分油费账户"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="28px" />
+
+
+                    <View
+                        android:id="@+id/view_youfeizhanghu_view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_below="@+id/tv_youfeizhanghu_biaoti"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:layout_marginTop="64px"
+                        android:background="#e7e7e7" />
+
+                    <TextView
+                        android:id="@+id/tv_youfeizhanghu_shuiming1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/view_youfeizhanghu_view2"
+                        android:layout_marginTop="20px"
+                        android:lineSpacingExtra="10px"
+                        android:paddingLeft="30px"
+                        android:paddingRight="30px"
+                        android:text=""
+                        android:textColor="@color/cl_999999"
+                        android:textSize="24px" />
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/lv_youfeizhanghu_shouzhimingxi"
+                    android:layout_below="@+id/rl_youfeizhanghu_top"
+                    android:layout_width="match_parent"
+                    android:layout_height="90px"
+                    android:background="@color/white"
+                    android:layout_marginTop="20px"
+                    >
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30px"
+                        android:layout_centerVertical="true"
+                        android:text="积分记录"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="28px"
+                        />
+
+                </RelativeLayout>
+                <View
+                    android:id="@+id/view_youfeizhanghu_view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_below="@+id/lv_youfeizhanghu_shouzhimingxi"
+                    android:background="#e7e7e7" />
+
+                <ListView
+                    android:id="@+id/lv_youfeizhanghu_listview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/view_youfeizhanghu_view3"
+                    android:background="@color/cl_white"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+        </com.zyd.wlwsdk.widge.pulltorefresh.PullableScrollView>
+
+        <include layout="@layout/load_more" />
+
+    </com.zyd.wlwsdk.widge.pulltorefresh.PullToRefreshLayout>
+
+</RelativeLayout>

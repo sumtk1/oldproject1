@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20px">
+
+        <TextView
+            android:id="@+id/tv_fenlei_yijifenlei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20px"
+            android:layout_marginTop="40px"
+            android:text="裙装"
+            android:textColor="@color/cl_333"
+            android:textSize="32px" />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_shouye_liebiao_shangpin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_fenlei_yijifenlei"
+            android:layout_toRightOf="@id/tablayout0"/>
+
+    </RelativeLayout>
+
+</com.zyd.wlwsdk.autolayout.AutoLinearLayout>

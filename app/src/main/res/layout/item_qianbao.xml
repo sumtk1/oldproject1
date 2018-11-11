@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="70px"
+        android:layout_marginTop="36px"
+        android:layout_toLeftOf="@+id/tv_jifen"
+        android:orientation="horizontal">
+
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="说明："-->
+            <!--android:textColor="#333333"-->
+            <!--android:textSize="28px" />-->
+
+        <TextView
+            android:id="@+id/tv_shuoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#333333"
+            android:textSize="28px" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_01"
+        android:layout_marginBottom="36px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="10px"
+        android:layout_marginTop="26px"
+        android:text=""
+        android:textColor="#666666"
+        android:textSize="22px" />
+
+    <TextView
+        android:id="@+id/tv_jifen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="30px"
+        android:text=""
+        android:textColor="#2b9ced"
+        android:textSize="30px" />
+
+
+</RelativeLayout>

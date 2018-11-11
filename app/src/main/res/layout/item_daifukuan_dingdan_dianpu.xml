@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.zyd.wlwsdk.autolayout.AutoRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10px"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="70px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout2"
+            android:background="@color/cl_white"
+            android:paddingLeft="30px">
+
+            <TextView
+                android:id="@+id/tv_item_daifukuan_dianpu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20px"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
+                android:text="店名"
+                android:textColor="#000"
+                android:textSize="28px" />
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="32px"
+                android:layout_height="32px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:src="@mipmap/ic_dian" />
+        </RelativeLayout>
+    </com.zyd.wlwsdk.autolayout.AutoRelativeLayout>
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#ffffff</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="ebebeb">#ebebeb</color>
+
+    <color name="main_color">#965aff</color>
+    <color name="page_text">#b890ff</color>
+
+    <color name="b4b4b4">#B4B4B4</color>
+    <color name="color_bg_gray">#e7e7e7</color>
+
+    //所有界面背景色
+    <color name="cl_background">#f6f6f6</color>
+
+    <color name="cl_f2f2f2">#80F2F2F2</color>
+    <color name="cl_bg_gray">#e7e7e7</color>
+    <color name="view_sheng">#dcdcdc</color>
+    <color name="cl_bg_view">#EEE</color>
+    <color name="cl_f1f1f1">#F1F1F1</color>
+    <color name="cl_333">#333</color>
+    <color name="cl_000000">#000000</color>
+    <color name="cl_E0E0E0">#E0E0E0</color>
+    <color name="cl_999">#999999</color>
+
+    <!--公用按钮确定按钮按下颜色-->
+    <color name="cl_btn_confirm_normal">#E33333</color>
+    <color name="cl_btn_confirm_pressed">#F22100</color>
+
+
+    <color name="cl_btn_shangpin_xiangqing_normal">#ECA51E</color>
+    <color name="cl_btn_shangpin_xiangqing_pressed">#FED85F</color>
+
+    <color name="transparent">#0000</color>
+
+    <color name="swipeRefresh_color">#965aff</color>
+
+
+</resources>

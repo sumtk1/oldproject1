@@ -1,0 +1,314 @@
+<html>
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <title>
+        web调用原生Demo
+    </title>
+</head>
+
+<body>
+
+    <div style="color:red;">web调用原生Demo</div>
+
+    <p>
+        <input type="button" value="关闭页面" onclick="closeweb();"/>
+        <input type="button" value="关闭页面跳转指定页面" onclick="closewebGo();"/>
+        <input type="button" value="设置页面不可返回" onclick="unablegoback();"/>
+    <p>
+        <input type="button" value="通讯录" onclick="addressBook();"/>
+        <input type="button" value="登录页" onclick="login();"/>
+        <input type="button" value="商品详情" onclick="shopinfo();"/>
+        <input type="button" value="相册" onclick="getphoto();"/>
+    <p>
+        <input type="button" value="视频播放器" onclick="video();"/>
+        <input type="button" value="打开新webview" onclick="webview();"/>
+        <input type="button" value="获取app类型" onclick="appType();"/>
+    <p>
+        <input type="button" value="显示倒计时" onclick="pageType();"/>
+        <input type="button" value="获取app版本号" onclick="appVersion();"/>
+        <input type="button" value="设置标题" onclick="setTitle();"/>
+    <p>
+        <input type="button" value="微信支付" onclick="wxpay();"/>
+        <input type="button" value="支付宝支付" onclick="alipay();"/>
+        <input type="button" value="银联支付" onclick="uppay();"/>
+    <p>
+        <input type="button" value="密码输入框" onclick="pwd();"/>
+        <input type="button" value="跳转收银台" onclick="toCashier();"/>
+        <input type="button" value="新收银台支付请求" onclick="toPay();"/>
+    <p>
+        <input type="button" value="baidu" onclick="javascript:window.location.href='https://www.baidu.com/'"/>
+        <input type="button" value="标题栏搜索框" onclick="search();"/>
+        <input type="button" value="返回上一页" onclick="goBack();"/>
+    <p>
+        <input type="button" value="隐藏标题栏" onclick="hideTitleBar();"/>
+        <input type="button" value="隐藏标题栏并且全屏" onclick="hideTitleBar0();"/>
+
+</body>
+
+<script>
+
+        // 关闭网页
+        function closeweb(){
+            p_golbal.func({
+                type: "closeweb",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 关闭页面跳转指定页面 page = main_01/main_02/main_03/main_04/main_05 (分别为首页12345)
+        function closewebGo(){
+            p_golbal.func({
+                type: "closewebGo",
+                page: "main_01",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 返回键退出网页
+        function unablegoback(){
+            p_golbal.func({
+                type: "unablegoback",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 获取通讯录
+        function addressBook(){
+            p_golbal.func({
+                type: "addressBook",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 调起登录
+        function login(){
+            p_golbal.func({
+                type: "login",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 商品详情
+        function shopinfo(){
+            p_golbal.func({
+                type: "shopinfo",
+                shopid:"1209",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 获取手机图片
+        function getphoto(){
+            p_golbal.func({
+                type: "getphoto",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 视频播放器
+        function video(){
+            p_golbal.func({
+                type: "video",
+                url: "http://192.168.0.207:4000/useCourse/video/khShopping.mp4",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 打开新webview
+        function webview(){
+            p_golbal.func({
+                type: "webview",
+                url: "http://192.168.0.147:8080/Explain/shopindex.xhtml",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // APP类型
+        function appType(){
+            p_golbal.func({
+                type: "appType",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 当前页面类型（pay 显示倒计时）
+        function pageType(){
+            p_golbal.func({
+                type: "PageType",
+                page: "pay",
+                time: "6",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // APP版本号
+        function appVersion(){
+            p_golbal.func({
+                type: "appVersion",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 改变webview标题
+        function setTitle(){
+            p_golbal.func({
+                type: "title",
+                title: "网页标题123123123",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 微信支付
+        function wxpay(){
+            p_golbal.pay({
+                pay_type:"wx",
+                appid:"wx4d863985a4dfe452",
+                partnerid:"1440034602",
+                prepayid:"wx2017101317275832c9f054640679407018",
+                noncestr:"hovFSPL3kSDBHNug","timestamp":"1507886832",
+                package:"Sign=WXPay",
+                sign:"194C0D59E6B122ABD87F564E5F6EC61B",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 支付宝支付
+        function alipay(){
+            p_golbal.pay({
+                pay_type:"alipay",
+                return_info:"service%3D%22mobile.securitypay.pay%22%26partner%3D%222088521599218220%22%26_input_charset%3D%22UTF-8%22%26body%3D%22b02fa30bd32db42b328fd7c92ed49b4e0993e7083ebe3d8ee1a72b96d778b96b%22%26out_trade_no%3D%22123000010926000000000403%22%26payment_type%3D%221%22%26seller_id%3D%22link%40abcaaa.top%22%26subject%3D%22%E5%85%85%E5%80%BC%22%26total_fee%3D%2210.00%22%26it_b_pay%3D%221d%22%26notify_url%3D%22http%253A%252F%252F183.239.170.178%253A7008%252Freturn_alipay.xhtml%22%26show_url%3D%22http%253A%252F%252F183.239.170.178%253A7008%252Freturn_alipay.xhtml%22%26sign%3D%22RYX5CeTkgI0fHtVzFkTm1Ba%252FckV%252FzWBI9qiN05iSGUadxWYyAwQyH0EMMZU9uy2ldJgcAbum093U82Sa4w%252FdUWqJj8Q%252FoAmykFROZs64WKmLw0Z%252BihH%252Bg9CQkHbsvOZVTYfXt%252BK%252FmYzsEcKQAlzB3CwnL%252BgdDpSMARqOYD8%252BdMIHr93lTEELq6pP%252BVqxVJHqkVu6R8qjuH%252FgWrLNBYprkxH1A1ZzpntkZ30IS%252BgwGcOioXJJ8Lr%252F9tq8Meja%252FwHNj81Z0IquMaas6KF1smaZDQ5tnEglGLpNe2Pt1F42555zXs3fJx3AZxrMow%252FY6OGqv3w8HgpHA1URm3yRm3rtbA%253D%253D%22%26sign_type%3D%22RSA%22",
+                success: function (res) {
+                alert(res+"测试支付宝回调")
+                    res = JSON.parse(res);
+                    if(res.状态  == "成功"){
+                        window.location.href = "finish.xhtml?onlyID="+_this.dataParam.onlyID;
+                    }
+                }
+            });
+        }
+
+        // 银联支付
+        function uppay(){
+            p_golbal.func({
+                type: "UPPay",
+                tn: "123456789",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 弹出输入密码框
+        function pwd(){
+            p_golbal.pay({
+                pay_type:"pwd_box",
+                money:"1000",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 跳转收银台
+        function toCashier(){
+            p_golbal.func({
+                type: "toCashier",
+                prepay_id: "13430629179_20170912161323",
+                appid: "d678efh567hg6789",
+                sign: "634785E99DC6123EA5315C054CFC46F1",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 收银台支付
+        function toPay(){
+            p_golbal.func({
+                type: "toPay",
+                data: "{'money':'34.14', 'mch_id':'1230008244', 'sign':'2763B47BACD22A9512A3BC3F5AE9871D', 'pay_type1':'红利账户', 'pay_type2':'wx'}",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 搜索框
+        function search(){
+            p_golbal.func({
+                type: "search",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        var activity = {
+            searchResult:function(data){
+                alert(data)
+            }
+        }
+
+        // 隐藏标题栏
+        function hideTitleBar(){
+            p_golbal.func({
+                type: "hideTitleBar",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 隐藏标题栏(state = 0 状态栏透明)
+        function hideTitleBar0(){
+            p_golbal.func({
+                type: "hideTitleBar",
+                state:"0",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+        // 返回上一页
+        function goBack(){
+            p_golbal.func({
+                type: "goBack",
+                success: function (res) {
+                    alert(res);
+                }
+            });
+        }
+
+
+</script>
+
+</html>

@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_change_pwd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_gray">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar" />
+
+    <LinearLayout
+        android:id="@+id/ll_01"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_below="@+id/in_titlebar"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_changepaw_login"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_xugai_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="登录密码修改"
+                android:textColor="#b85cff"
+                android:textSize="30px" />
+
+            <View
+                android:id="@+id/v_xingai_login"
+                android:layout_width="50px"
+                android:layout_height="3px"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:background="#b85cff" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_changepaw_pay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_xiugai_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="支付密码修改"
+                android:textColor="#B4B4B4"
+                android:textSize="30px" />
+
+            <View
+                android:id="@+id/v_xiugai_pay"
+                android:layout_width="50px"
+                android:layout_height="3px"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:background="#b85cff"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_setup_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_01"
+        android:layout_marginTop="30px"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:text="原密码"
+                android:textColor="#666666"
+                android:textSize="28px" />
+
+            <EditText
+                android:id="@+id/et_changepassword_currentPwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/tv_01"
+                android:background="@null"
+                android:hint="请输入原密码"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColorHint="@color/b4b4b4"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:layout_marginTop="16px"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_02"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:text="新密码"
+                android:textColor="#666666"
+                android:textSize="28px" />
+
+            <EditText
+                android:id="@+id/et_changepassword_newPwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/tv_02"
+                android:background="@null"
+                android:hint="请输入新密码"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:textColorHint="@color/b4b4b4"
+                android:textSize="30px" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="96px"
+            android:layout_marginTop="16px"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/tv_03"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:text="确认密码"
+                android:textColor="#666666"
+                android:textSize="28px" />
+
+            <EditText
+                android:id="@+id/et_changepassword_confirmPwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/tv_03"
+                android:background="@null"
+                android:hint="请确认密码"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:textColorHint="@color/b4b4b4"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_forgetpwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ll_setup_1"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="16px"
+        android:text="忘记密码？"
+        android:textColor="@color/main_color"
+        android:textSize="32px" />
+
+    <TextView
+        android:id="@+id/tv_pwd_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_forgetpwd"
+        android:layout_marginLeft="20px"
+        android:layout_marginTop="10px"
+        android:text=""
+        android:textColor="#666666" />
+
+    <Button
+        android:id="@+id/btn_log_xiugai"
+        style="@style/btn_system_style"
+        android:layout_marginLeft="25px"
+        android:layout_marginRight="25px"
+        android:layout_marginBottom="45dp"
+        android:text="确 定"
+        android:layout_alignParentBottom="true"
+        />
+
+
+
+</RelativeLayout>

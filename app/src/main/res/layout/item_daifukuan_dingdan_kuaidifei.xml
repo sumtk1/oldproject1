@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <com.zyd.wlwsdk.autolayout.AutoRelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rl_item_daifukuan_dingdan_yunfei"
+            android:layout_width="match_parent"
+            android:layout_height="40px"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/relativeLayout2"
+            android:background="@color/cl_white"
+            android:paddingLeft="30px">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_toEndOf="@+id/imageView"
+                android:layout_toRightOf="@+id/imageView"
+                android:text="运费"
+                android:textColor="#666"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/tv_item_dingdan_kuaidifei"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="30px"
+                android:text="￥0.00"
+                android:textColor="@color/cl_333333"
+                android:textSize="28px" />
+
+            <include layout="@layout/include_view_sheng"/>
+
+
+        </RelativeLayout>
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_item_daifukuan_dingdan_heji"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_below="@+id/rl_item_daifukuan_dingdan_yunfei"-->
+        <!--android:paddingLeft="30px"-->
+        <!--android:paddingRight="30px"-->
+        <!--android:background="@color/cl_white">-->
+
+
+        <!--<TextView-->
+        <!--android:id="@+id/textView2"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_toEndOf="@+id/imageView"-->
+        <!--android:layout_toRightOf="@+id/imageView"-->
+        <!--android:text="合计"-->
+        <!--android:textColor="#666"-->
+        <!--android:textSize="28px" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_item_dingdan_heji"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:text="￥0.00"-->
+        <!--android:textColor="@color/cl_333333"-->
+        <!--android:textSize="28px" />-->
+
+        <!--<include layout="@layout/include_view_sheng" />-->
+
+        <!--</RelativeLayout>-->
+    </com.zyd.wlwsdk.autolayout.AutoRelativeLayout>
+</LinearLayout>

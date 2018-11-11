@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="135px"
+        android:layout_height="135px"
+        android:layout_centerInParent="true">
+
+        <ImageView
+            android:id="@+id/id_item_image"
+            android:layout_width="121px"
+            android:layout_height="121px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:horizontalSpacing="3px"
+            android:scaleType="centerCrop"
+            android:verticalSpacing="3px"
+            app:layout_auto_basewidth="height"/>
+
+        <ImageButton
+            android:id="@+id/id_item_select"
+            android:layout_width="40px"
+            android:layout_height="40px"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@mipmap/icon_thk_delete"
+            android:paddingRight="-30px"
+            android:paddingTop="-30px"
+            android:visibility="visible"
+            app:layout_auto_basewidth="height"/>
+    </RelativeLayout>
+
+</com.zyd.wlwsdk.autolayout.AutoRelativeLayout>

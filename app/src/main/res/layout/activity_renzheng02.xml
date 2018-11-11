@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_gray">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/in_titlebar">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_zhuangshi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="27px"
+                android:text="上传身份证正面照"
+                android:textColor="#333333"
+                android:textSize="28px" />
+
+            <ImageView
+                android:id="@+id/iv_sfz_photo"
+                android:layout_width="660px"
+                android:layout_height="390px"
+                android:layout_below="@+id/tv_zhuangshi"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24px"
+                android:background="@mipmap/ic_realname_pictures"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_fangmian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_sfz_photo"
+                android:layout_marginLeft="30px"
+                android:layout_marginTop="27px"
+                android:text="上传身份证反面照"
+                android:textColor="#333333"
+                android:textSize="28px" />
+
+            <ImageView
+                android:id="@+id/iv_sf_photo_fan"
+                android:layout_width="660px"
+                android:layout_height="390px"
+                android:layout_below="@+id/tv_fangmian"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="24px"
+                android:background="@mipmap/bg_fanmian"
+                android:scaleType="fitXY" />
+
+            <LinearLayout
+                android:id="@+id/ll_zhushi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_sf_photo_fan"
+                android:layout_marginLeft="32px"
+                android:layout_marginTop="27px"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="注："
+                    android:textColor="#666666"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="7px"
+                    android:text="建议图像文件控制在200KB以内，请确保文字图像清晰,\n越清晰越好"
+                    android:textColor="#666666"
+                    android:textSize="24px" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_zhaopian"
+                android:layout_width="match_parent"
+                android:layout_height="287px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/ll_zhushi"
+                android:layout_marginTop="40px"
+                android:background="@color/white">
+
+                <RelativeLayout
+                    android:id="@+id/rl_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="30px"
+                    android:layout_marginTop="24px">
+
+                    <TextView
+                        android:id="@+id/tv_other"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="拍摄照片要求"
+                        android:textColor="#333333"
+                        android:textSize="28px" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40px"
+                        android:layout_marginRight="40px"
+                        android:layout_toLeftOf="@+id/tv_other"
+                        android:layout_toStartOf="@+id/tv_other"
+                        android:background="#e0e0e0" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1px"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="40px"
+                        android:layout_marginRight="40px"
+                        android:layout_toRightOf="@+id/tv_other"
+                        android:background="#e0e0e0" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rl_title"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="48px"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="150px"
+                            android:layout_height="105px"
+                            android:src="@mipmap/ic_standard_shooting" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="29px"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="24px"
+                                android:layout_height="19px"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/ic_realname_correct" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="标准拍摄" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16px"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="150px"
+                            android:layout_height="105px"
+                            android:src="@mipmap/ic_frame_deletion" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="29px"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="24px"
+                                android:layout_height="19px"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/ic_realname_wrong" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="边框缺失" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16px"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="150px"
+                            android:layout_height="105px"
+                            android:src="@mipmap/ic_photo_blur" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="29px"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="24px"
+                                android:layout_height="19px"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/ic_realname_wrong" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="照片模糊" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16px"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="150px"
+                            android:layout_height="105px"
+                            android:src="@mipmap/ic_realname_flash" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="29px"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="24px"
+                                android:layout_height="19px"
+                                android:layout_gravity="center"
+                                android:src="@mipmap/ic_realname_wrong" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="闪光强烈" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btn_next"
+                style="@style/btn_system_style_rect"
+                android:layout_below="@+id/rl_zhaopian"
+                android:layout_marginTop="50px"
+                android:text="提 交" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

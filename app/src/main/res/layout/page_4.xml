@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/im_page_04"
+        android:layout_width="720px"
+        android:layout_height="820px"
+        android:layout_centerHorizontal="true"
+        android:background="@mipmap/ic_page04" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/im_page_04"
+        android:layout_marginTop="60px"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/tv_page_01"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="实时社交"
+            android:textColor="@color/main_color"
+            android:textSize="44px" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_page_01"
+            android:layout_marginTop="5px"
+            android:text="关注消息，服务功能快捷方便"
+            android:textColor="@color/page_text"
+            android:textSize="30px" />
+        <TextView
+            android:id="@+id/tv_ljty"
+            android:layout_width="300px"
+            android:layout_height="70px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="70px"
+            style="@style/btn_system_style"
+            android:gravity="center"
+            android:text="立即体验"
+            android:textSize="30px"
+            android:textColor="#ffffff"/>
+    </RelativeLayout>
+
+</RelativeLayout>

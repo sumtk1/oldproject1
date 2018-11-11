@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/include_titlebar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="22px"
+        android:background="@drawable/bg_mingxi_bottom"
+        android:paddingBottom="30px">
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40px"
+            android:text=""
+            android:textColor="@color/cl_333333"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40px"
+            android:text=""
+            android:textColor="@color/cl_black"
+            android:textSize="72px" />
+
+        <TextView
+            android:id="@+id/tv_jiaoyi_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_money"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="49px"
+            android:text=""
+            android:textColor="#965aff"
+            android:textSize="28px" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:background="@drawable/bg_mingxi_top"
+        android:orientation="vertical"
+        android:paddingBottom="50px"
+        android:paddingLeft="26px"
+        android:paddingRight="26px"
+        android:paddingTop="50px">
+
+        <RelativeLayout
+            android:id="@+id/rl_zhangdan_xiangqing_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_zhangdan_xiangqing_1_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text=""
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/tv_zhangdan_xiangqing_1_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="30px"
+                android:layout_toRightOf="@+id/tv_zhangdan_xiangqing_1_1"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_zhangdan_xiangqing_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35px"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_zhangdan_xiangqing_2_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="说明"
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/tv_zhangdan_xiangqing_2_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="30px"
+                android:layout_toRightOf="@+id/tv_zhangdan_xiangqing_2_1"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_zhangdan_xiangqing_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35px"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_zhangdan_xiangqing_3_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="订单号"
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/tv_zhangdan_xiangqing_3_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="30px"
+                android:layout_toRightOf="@+id/tv_zhangdan_xiangqing_3_1"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_zhangdan_xiangqing_4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35px"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_zhangdan_xiangqing_4_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="支付方式"
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/tv_zhangdan_xiangqing_4_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="30px"
+                android:layout_toRightOf="@+id/tv_zhangdan_xiangqing_4_1"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_zhangdan_xiangqing_5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35px"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_zhangdan_xiangqing_5_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text=""
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/tv_zhangdan_xiangqing_5_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="30px"
+                android:layout_toRightOf="@+id/tv_zhangdan_xiangqing_5_1"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_zhangdan_xiangqing_6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="35px"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv_zhangdan_xiangqing_6_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:text="时间"
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/tv_zhangdan_xiangqing_6_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20px"
+                android:layout_marginRight="30px"
+                android:layout_toRightOf="@+id/tv_zhangdan_xiangqing_6_1"
+                android:ellipsize="end"
+                android:gravity="right"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

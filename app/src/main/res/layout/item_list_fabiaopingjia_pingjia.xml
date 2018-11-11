@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cl_white">
+
+        <ImageView
+            android:id="@+id/fabiaopingjia_img"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_marginBottom="30px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="30px"
+            android:scaleType="fitXY" />
+
+        <FrameLayout
+            android:id="@+id/fabiaopingjia_framelayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_item_shouye_tupian"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@+id/fabiaopingjia_img">
+
+            <TextView
+                android:id="@+id/fabiaopingjia_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:gravity="center_vertical"
+                android:maxLines="2"
+                android:text="ONLY2016夏装新品纯棉宽松高腰卷边漆点牛仔ONLY2016夏装新品纯棉宽松高腰卷边漆点牛仔"
+                android:textColor="@color/cl_333333"
+                android:textSize="30px"
+                app:layout_auto_baseheight="width" />
+        </FrameLayout>
+
+
+        <TextView
+            android:id="@+id/fabiaopingjia_guigeleixing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fabiaopingjia_framelayout"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="8px"
+            android:layout_toRightOf="@+id/fabiaopingjia_img"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/cl_999999"
+            android:textSize="22px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/fabiaopingjia_img"
+            android:background="@color/view_sheng" />
+
+        <EditText
+            android:id="@+id/fabiaopingjia_neirong"
+            android:layout_width="match_parent"
+            android:layout_height="140px"
+            android:layout_below="@+id/fabiaopingjia_img"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="30px"
+            android:background="@null"
+            android:ellipsize="end"
+            android:gravity="top"
+            android:hint="分享你的购买心得~~"
+            android:maxLength="50"
+            android:text=""
+            android:textColor="#666666"
+            android:textSize="32px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_below="@+id/fabiaopingjia_neirong"
+            android:background="@color/view_sheng" />
+
+        <TextView
+            android:id="@+id/fabiaopingjia_shangchuan_shuomig1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fabiaopingjia_neirong"
+            android:layout_marginBottom="30px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="24px"
+            android:text="上传图片"
+            android:textColor="@color/cl_333333"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/fabiaopingjia_shangchuan_shuomig2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/fabiaopingjia_shangchuan_shuomig1"
+            android:layout_below="@+id/fabiaopingjia_neirong"
+            android:layout_marginBottom="30px"
+            android:layout_marginLeft="12px"
+            android:layout_marginTop="24px"
+            android:layout_toRightOf="@+id/fabiaopingjia_shangchuan_shuomig1"
+            android:text="（最多4张）"
+            android:textColor="@color/cl_999999"
+            android:textSize="20px" />
+
+        <com.gloiot.hygo.widget.NoSlipGridview
+            android:id="@+id/fabiaopingjia_pictures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fabiaopingjia_shangchuan_shuomig1"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:cacheColorHint="@android:color/transparent"
+            android:clipChildren="true"
+            android:gravity="center"
+            android:horizontalSpacing="3px"
+            android:listSelector="@android:color/transparent"
+            android:numColumns="4"
+            android:paddingBottom="30px"
+            android:verticalSpacing="4px" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120px"
+            android:layout_below="@+id/fabiaopingjia_pictures">
+
+            <TextView
+                android:id="@+id/fabiaopingjia_text1"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30px"
+                android:gravity="center_vertical"
+                android:text="商品评价"
+                android:textColor="@color/cl_666666"
+                android:textSize="30px" />
+
+            <com.zyd.wlwsdk.widge.MyRatingBar xmlns:myRatingBar="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/fabiaopingjia_ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="42px"
+                android:layout_marginRight="24px"
+                android:layout_toRightOf="@+id/fabiaopingjia_text1"
+                myRatingBar:canEdit="true"
+                myRatingBar:countSelected="3"
+                myRatingBar:differentSize="false"
+                myRatingBar:dividerWidth="10px"
+                myRatingBar:starCount="5"
+                myRatingBar:stateResId="@drawable/comment_ratingbar_selector"
+                myRatingBar:widthAndHeight="70px" />
+
+            <TextView
+                android:id="@+id/fabiaopingjia_star_text"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="30px"
+                android:layout_toRightOf="@+id/fabiaopingjia_ratingBar"
+                android:gravity="center_vertical"
+                android:text="一般"
+                android:textColor="@color/cl_999999" />
+
+            <include layout="@layout/include_view_sheng" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

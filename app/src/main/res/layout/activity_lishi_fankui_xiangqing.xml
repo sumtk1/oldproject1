@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/include_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cl_background"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="30px">
+
+        <TextView
+            android:id="@+id/tv_lishi_fankui_xiangqing_time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/cl_999999"
+            android:textSize="24px" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:background="@drawable/bg_radius"
+            android:paddingBottom="30px"
+            android:paddingLeft="15px"
+            android:paddingRight="15px"
+            android:paddingTop="30px">
+
+            <TextView
+                android:id="@+id/tv_lishi_fankui_xiangqing_leixing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="类型："
+                android:textColor="@color/cl_333333"
+                android:textSize="30px" />
+
+            <TextView
+                android:id="@+id/tv_lishi_fankui_xiangqing_ask"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_lishi_fankui_xiangqing_leixing"
+                android:layout_marginTop="28px"
+                android:text="问："
+                android:textColor="@color/cl_666666"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/tv_lishi_fankui_xiangqing_question"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_lishi_fankui_xiangqing_leixing"
+                android:layout_marginTop="28px"
+                android:layout_toRightOf="@+id/tv_lishi_fankui_xiangqing_ask"
+                android:text=""
+                android:textColor="@color/cl_666666"
+                android:textSize="28px" />
+
+            <GridView
+                android:id="@+id/tv_lishi_fankui_xiangqing_tupian"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="14px"
+                android:layout_marginRight="14px"
+                android:layout_below="@+id/tv_lishi_fankui_xiangqing_question"
+                android:layout_marginTop="30px"
+                android:numColumns="4"
+                android:horizontalSpacing="6px"
+                android:visibility="gone">
+            </GridView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_lishi_fankui_xiangqing_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:text=""
+            android:textColor="@color/cl_999999"
+            android:textSize="24px" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20px"
+            android:background="@drawable/bg_radius_e6e6e6"
+            android:paddingBottom="30px"
+            android:paddingLeft="15px"
+            android:paddingRight="15px"
+            android:paddingTop="30px">
+
+
+            <TextView
+                android:id="@+id/tv_lishi_fankui_xiangqing_answer1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="答："
+                android:textColor="@color/cl_666666"
+                android:textSize="28px" />
+
+            <TextView
+                android:id="@+id/tv_lishi_fankui_xiangqing_answer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_lishi_fankui_xiangqing_answer1"
+                android:text=""
+                android:textColor="@color/cl_666666"
+                android:textSize="28px" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="336px">
+
+    <com.zyd.wlwsdk.widge.swipe.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swipelayout"
+        android:layout_width="720px"
+        android:layout_height="250px">
+
+        <com.zyd.wlwsdk.widge.swipe.FrontLayout
+            android:id="@+id/front"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cl_white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/cl_white"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_marginLeft="30px"
+                    android:background="@color/view_sheng" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <CheckBox
+                        android:id="@+id/cb_check"
+                        android:layout_width="32px"
+                        android:layout_height="32px"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="30px"
+                        android:layout_marginRight="30px"
+                        android:background="@drawable/bg_gouwuche_rb"
+                        android:button="@null"
+                        app:layout_auto_basewidth="height" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_item_shopcart"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingBottom="20px"
+                        android:paddingTop="32px">
+
+                        <ImageView
+                            android:id="@+id/iv_pic"
+                            android:layout_width="140px"
+                            android:layout_height="140px"
+                            app:layout_auto_basewidth="height" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="30px"
+                            android:layout_weight="1"
+                            android:paddingLeft="20px">
+
+                            <FrameLayout
+                                android:id="@+id/fl_shopcart"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="30px">
+
+
+                                <TextView
+                                    android:id="@+id/tv_item_shopcart_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginRight="30px"
+                                    android:ellipsize="end"
+                                    android:maxLines="2"
+                                    android:text=""
+                                    android:textColor="@color/black"
+                                    android:textSize="24px" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:id="@+id/tv_item_shopcart_guige"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/fl_shopcart"
+                                android:layout_marginTop="10px"
+                                android:ellipsize="end"
+                                android:maxLines="1"
+                                android:text="颜色:白色 尺码:M"
+                                android:textColor="@color/cl_666666"
+                                android:textSize="24px" />
+
+                            <TextView
+                                android:id="@+id/tv_shopcart_huodong_dikou"
+                                android:layout_width="wrap_content"
+                                android:layout_height="30px"
+                                android:layout_below="@+id/tv_item_shopcart_guige"
+                                android:layout_marginTop="20px"
+                                android:background="@drawable/btn_style_04_nopressed"
+                                android:paddingLeft="8px"
+                                android:paddingRight="8px"
+                                android:text="可抵用50%积分"
+                                android:textColor="@color/cl_2b9ced"
+                                android:textSize="24px" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentBottom="true"
+                                android:layout_below="@+id/tv_shopcart_huodong_dikou">
+
+                                <TextView
+                                    android:id="@+id/tv_item_shopcart_price"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentBottom="true"
+                                    android:text="¥"
+                                    android:textColor="@color/black"
+                                    android:textSize="26px" />
+
+                                <RelativeLayout
+                                    android:id="@+id/relativeLayout"
+                                    android:layout_width="160px"
+                                    android:layout_height="50px"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentRight="true">
+
+                                    <TextView
+                                        android:id="@+id/tv_buy_count"
+                                        android:layout_width="70px"
+                                        android:layout_height="50px"
+                                        android:layout_alignParentTop="true"
+                                        android:layout_toEndOf="@+id/iv_decrease"
+                                        android:layout_toRightOf="@+id/iv_decrease"
+                                        android:background="@mipmap/ic_buy_account_icon"
+                                        android:gravity="center"
+                                        android:scaleType="fitXY"
+                                        android:text="0"
+                                        android:textColor="@color/black" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_increase"
+                                        android:layout_width="45px"
+                                        android:layout_height="50px"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_alignParentTop="true"
+                                        android:scaleType="fitXY"
+                                        android:src="@mipmap/ic_add_icon" />
+
+                                    <ImageView
+                                        android:id="@+id/iv_decrease"
+                                        android:layout_width="45px"
+                                        android:layout_height="50px"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_alignParentStart="true"
+                                        android:layout_alignParentTop="true"
+                                        android:scaleType="fitXY"
+                                        android:src="@mipmap/ic_increace_icon" />
+                                </RelativeLayout>
+
+                            </RelativeLayout>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </com.zyd.wlwsdk.widge.swipe.FrontLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible">
+
+            <Button
+                android:id="@+id/btn_item_delete"
+                android:layout_width="140px"
+                android:layout_height="250px"
+                android:background="@color/cl_2b9ced"
+                android:gravity="center"
+                android:text="删除"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </com.zyd.wlwsdk.widge.swipe.SwipeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="86px"
+        android:layout_below="@+id/swipelayout"
+        android:background="@color/cl_white">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:layout_marginLeft="30px"
+            android:background="@color/view_sheng" />
+
+        <TextView
+            android:id="@+id/tv_shopcart_huodongshangpin_leixing"
+            android:layout_width="98px"
+            android:layout_height="28px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="94px"
+            android:background="@drawable/btn_style_04_nopressed"
+            android:gravity="center"
+            android:text="活动商品"
+            android:textColor="@color/cl_2b9ced"
+            android:textSize="22px" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="12px"
+            android:layout_toRightOf="@+id/tv_shopcart_huodongshangpin_leixing"
+            android:text="请单独下单支付"
+            android:textColor="@color/cl_333333"
+            android:textSize="22px" />
+
+    </RelativeLayout>
+</com.zyd.wlwsdk.autolayout.AutoRelativeLayout>

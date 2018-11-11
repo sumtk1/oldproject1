@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_00"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/cl_white">
+
+        <ImageView
+            android:id="@+id/iv_shouhou_item_dianpu_img"
+            android:layout_width="32px"
+            android:layout_height="30px"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="22px"
+            android:src="@mipmap/ic_dian" />
+
+        <TextView
+            android:id="@+id/tv_shouhou_item_dianpuming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="20px"
+            android:layout_toLeftOf="@+id/tv_dingdan_statu"
+            android:layout_toRightOf="@+id/iv_shouhou_item_dianpu_img"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/cl_333333"
+            android:textSize="28px" />
+
+        <TextView
+            android:id="@+id/tv_dingdan_statu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30px"
+            android:text=""
+            android:textColor="@color/cl_333333"
+            android:textSize="26px" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cl_background"
+        android:gravity="center_vertical"
+        android:paddingBottom="14px"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingTop="14px">
+
+        <ImageView
+            android:id="@+id/imv_shangpin"
+            android:layout_width="150px"
+            android:layout_height="150px"
+            android:layout_marginRight="24px"
+            android:scaleType="fitCenter"
+            app:layout_auto_basewidth="height" />
+
+        <TextView
+            android:id="@+id/tv_shangpin_mingcheng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/imv_shangpin"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="啥地方和水电费大师傅is大黄蜂闪电发货大绥河闪电发货UI啥地方和水电费大师傅is大黄蜂闪电发货大绥河闪电发货UI"
+            android:textColor="@color/cl_333333"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/tv_shangpin_yansefenlei"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_shangpin_mingcheng"
+            android:layout_marginLeft="4px"
+            android:layout_marginTop="20px"
+            android:layout_toRightOf="@+id/imv_shangpin"
+            android:text=""
+            android:textColor="@color/cl_999999"
+            android:textSize="24px" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:layout_marginBottom="2px"
+        android:background="@color/cl_white"
+        android:gravity="center_vertical|right"
+        android:orientation="horizontal"
+        android:paddingRight="30px">
+
+        <TextView
+            android:id="@+id/tv_shangpin_shuliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="数量： "
+            android:textColor="@color/cl_333333"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/iv_shouhou_item_heji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24px"
+            android:text="合计： "
+            android:textColor="@color/cl_333333"
+            android:textSize="24px" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_shenhe_statu"
+        android:layout_width="match_parent"
+        android:layout_height="81px"
+        android:background="@color/cl_white"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/imv_statu"
+            android:layout_width="21px"
+            android:layout_height="21px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="29px" />
+
+        <TextView
+            android:id="@+id/tv_shuohou_shuoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="65px"
+            android:layout_marginTop="26px"
+            android:text=""
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+        <ImageView
+            android:id="@+id/icon_right"
+            android:layout_width="14px"
+            android:layout_height="24px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="25px"
+            android:background="@mipmap/icon_thk_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_btn"
+        android:layout_width="match_parent"
+        android:layout_height="81px"
+        android:background="@color/cl_white">
+
+        <Button
+            android:id="@+id/bt_repeal"
+            android:layout_width="wrap_content"
+            android:layout_height="49px"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="34px"
+            android:layout_marginTop="16px"
+            android:background="@drawable/bg_btn_apply_repeal"
+            android:paddingLeft="25px"
+            android:paddingRight="25px"
+            android:text=""
+            android:textColor="@color/cl_2b9ced"
+            android:textSize="24px" />
+    </RelativeLayout>
+
+</com.zyd.wlwsdk.autolayout.AutoLinearLayout>

@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/layout_tv_kuituanxinxi"
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:paddingLeft="30px"
+        android:text="退款信息"
+        android:textColor="@color/cl_333333"
+        android:textSize="28px" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="180px"
+        android:paddingLeft="30px"
+        android:paddingRight="30px">
+
+        <ImageView
+            android:id="@+id/layout_iv_kuituanxinxi_shangpin_img"
+            android:layout_width="140px"
+            android:layout_height="140px"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20px" />
+
+        <TextView
+            android:id="@+id/layout_tv_kuituanxinxi_shangpin_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@+id/layout_iv_kuituanxinxi_shangpin_img"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/cl_333333"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/layout_iv_kuituanxiangqing_shangpin_guige"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layout_tv_kuituanxinxi_shangpin_title"
+            android:layout_marginTop="20px"
+            android:layout_toLeftOf="@+id/layout_iv_kuituanxiangqing_shangpin_shuliang"
+            android:layout_toRightOf="@+id/layout_iv_kuituanxinxi_shangpin_img"
+            android:text="颜色分类："
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/layout_iv_kuituanxiangqing_shangpin_shuliang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/layout_tv_kuituanxinxi_shangpin_title"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="20px"
+            android:gravity="right"
+            android:minWidth="50px"
+            android:text="×"
+            android:textColor="@color/cl_999999"
+            android:textSize="24px" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_ll_kuituanxinxi_tuikuanleixing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingTop="30px">
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_leixing_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退款类型："
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_leixing"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_ll_kuituanxinxi_tuikuanjine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingTop="24px">
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_jine_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退款金额："
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_jine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_ll_kuituanxinxi_tuikuanyuanyin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingTop="24px">
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_yuanyin_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退款原因："
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_yuanyin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_ll_kuituanxinxi_tuikuanshuoming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingTop="24px">
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_shuoming_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退款说明："
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_shuoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_ll_kuituanxinxi_tuikuanzhuangtai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingTop="24px">
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_zhuangtai_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退款状态："
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_zhuangtai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_ll_kuituanxinxi_tuikuanzhanghu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingTop="24px">
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_zhanghu_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="退款账户："
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_zhanghu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_ll_kuituanxinxi_shenqingshijian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingTop="24px">
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_shijian_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="申请时间："
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_shijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_ll_kuituanxinxi_tongyishijian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingTop="24px">
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_tongyishijian_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="商家同意退款时间："
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_tongyishijian"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_ll_kuituanxinxi_dingdanbianhao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="24px"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:paddingTop="24px">
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_bianhao_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="订单编号："
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/layout_tv_tuikuan_xiangqing_bianhao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/cl_666666"
+            android:textSize="24px" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/layout_tv_tuikuan_xiangqing_pingzheng"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="24px"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:text="退款凭证："
+        android:textColor="@color/cl_666666"
+        android:textSize="24px"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/layout_rv_tuikuan_xiangqing_pingzheng"
+        android:layout_width="match_parent"
+        android:layout_height="144px"
+        android:layout_gravity="left"
+        android:background="@color/cl_white"
+        android:paddingBottom="24px"
+        android:paddingLeft="30px"
+        android:paddingRight="30px"
+        android:visibility="gone" />
+
+</LinearLayout>

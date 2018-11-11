@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_kehu_zhongxin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gloiot.hygo.ui.activity.my.kefu.KeHuZhongXinActivity">
+
+    <include layout="@layout/include_titlebar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toptitle_rl"
+        android:background="@color/cl_background">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.youth.banner.Banner
+                android:id="@+id/banner_kehu_zhongxin"
+                android:layout_width="match_parent"
+                android:layout_height="320px" />
+
+            <LinearLayout
+                android:id="@+id/gv_kehu_fuwu"
+                android:layout_width="match_parent"
+                android:layout_height="170px"
+                android:layout_below="@+id/banner_kehu_zhongxin"
+                android:layout_marginTop="20px"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <LinearLayout
+                    android:id="@+id/ll_kefu_zhongxin_zhinengkefu"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bt_rl"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60px"
+                        android:layout_height="60px"
+                        android:src="@mipmap/ic_kefu_zhineng" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22px"
+                        android:text="智能客服"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_kefu_zhongxin_rengongkefu"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bt_rl"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60px"
+                        android:layout_height="60px"
+                        android:src="@mipmap/ic_kefu_rengong" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22px"
+                        android:text="人工服务"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_kefu_zhongxin_yijianfankui"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/bt_rl"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="60px"
+                        android:layout_height="60px"
+                        android:src="@mipmap/ic_kefu_yijianfankui" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="22px"
+                        android:text="意见反馈"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="30px" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_changjian_wenti"
+                android:layout_width="match_parent"
+                android:layout_height="80px"
+                android:layout_below="@+id/gv_kehu_fuwu"
+                android:layout_marginLeft="30px"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:layout_width="5px"
+                    android:layout_height="30px"
+                    android:background="@color/cl_2b9ced" />
+
+                <TextView
+                    android:id="@+id/tv_changjian_wenti"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12px"
+                    android:text="常见问题"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="28px" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv_changjian_wenti"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_changjian_wenti"
+                android:background="@color/cl_white" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

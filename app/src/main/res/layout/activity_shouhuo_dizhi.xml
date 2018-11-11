@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_gray"
+    tools:context="com.gloiot.hygo.ui.activity.shopping.dizhi.ShouhuoDizhiActivity">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar" />
+
+    <TextView
+        android:id="@+id/tv_add_new_address"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bg_btn_violet_square"
+        android:gravity="center"
+        android:text="添加新地址"
+        android:textColor="@color/white"
+        android:textSize="32px"
+        android:visibility="gone" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_add_new_address"
+        android:layout_below="@id/in_titlebar"
+        android:visibility="gone" />
+
+    <!--无收货地址-->
+    <RelativeLayout
+        android:id="@+id/rl_null_address"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/in_titlebar"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_null_address"
+            android:layout_width="128px"
+            android:layout_height="178px"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="230px"
+            android:src="@mipmap/ic_shouhuo_dizhi_meiyou" />
+
+        <TextView
+            android:id="@+id/tv_null_explain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_null_address"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30px"
+            android:text="您还没有收货地址"
+            android:textColor="#999999" />
+
+        <Button
+            android:id="@+id/btn_add_new_address"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="100px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:background="@drawable/bg_btn_confirm"
+            android:text="添加新地址"
+            android:textColor="@color/cl_white"
+            android:textSize="34px" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.gloiot.hygo.ui.activity.my.shezhi.guanlianshouji.TianxieYanzhengmaActivity">
+
+    <include layout="@layout/include_titlebar" />
+
+    <ImageView
+        android:layout_width="68px"
+        android:layout_height="102px"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30px"
+        android:src="@mipmap/shouji_1" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30px">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="验证码已发送到手机："
+            android:textColor="#666666"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/tv_phonenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/main_color"
+            android:textSize="26px" />
+
+    </LinearLayout>
+
+    <com.zyd.wlwsdk.widge.YzmInputView
+        android:id="@+id/yzmv_yzm"
+        android:layout_width="312dp"
+        android:layout_height="52dp"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:layout_marginTop="20dp"
+        android:cursorVisible="false"
+        android:focusableInTouchMode="true"
+        android:inputType="number"
+        android:lines="1"
+        android:maxLength="4" />
+
+    <TextView
+        android:id="@+id/tv_next"
+        style="@style/btn_commit_blue"
+        android:layout_marginTop="128px"
+        android:background="@drawable/bg_no_but_fillet"
+        android:enabled="false"
+        android:text="下一步"
+        android:textColor="@color/white" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30px"
+        android:orientation="horizontal">
+
+        <com.gloiot.hygo.widget.TimeButton
+            android:id="@+id/tb_prompt_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/main_color"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_send_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="重发短信"
+            android:textColor="@color/main_color"
+            android:textSize="26px"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</LinearLayout>

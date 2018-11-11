@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.gloiot.hygo.ui.activity.my.shezhi.guanlianshouji.GenghuanShoujiHaoma02Activity">
+
+    <include layout="@layout/include_titlebar" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="30px"
+        android:text="更换手机号，下次可使用新手机号登录。"
+        android:textColor="#666666"
+        android:textSize="26px"
+         />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="30px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当前手机号："
+            android:textColor="#666666"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/tv_current_phonenum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5px"
+            android:textColor="#965aff"
+            android:textSize="26px" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="50px"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="手机号码"
+            android:textColor="#333333"
+            android:textSize="32px" />
+        <TextView
+            android:id="@+id/tv_quhao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:text=""
+            android:textColor="#333333"
+            android:textColorHint="#999999" />
+
+        <EditText
+            android:id="@+id/et_new_phonenum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20px"
+            android:background="@null"
+            android:ellipsize="end"
+            android:hint="请输入手机号"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="#333333"
+            android:textColorHint="#999999"
+            android:textSize="32px" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="30px"
+        android:background="#e0e0e0" />
+
+    <TextView
+        android:id="@+id/tv_next"
+        style="@style/btn_commit_blue"
+        android:layout_marginTop="162px"
+        android:background="@drawable/bg_no_but_fillet"
+        android:enabled="false"
+        android:text="下一步"
+        android:textColor="@color/white" />
+
+</LinearLayout>

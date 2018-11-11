@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_setup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_background">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/in_titlebar"
+        android:layout_marginBottom="30px"
+        android:layout_marginTop="20px"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_gywm"
+            android:layout_width="match_parent"
+            android:layout_height="90px"
+            android:layout_marginTop="2px"
+            android:background="@drawable/bt_rl"
+            android:paddingLeft="30px">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="关于"
+                android:textColor="#666666"
+                android:textSize="30px" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30px"
+                android:src="@mipmap/ic_arrow_right" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_log_change"
+        style="@style/btn_style_05"
+        android:layout_width="match_parent"
+        android:layout_height="90px"
+        android:layout_above="@+id/btn_log_out"
+        android:layout_marginBottom="30px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:gravity="center"
+        android:text="切 换 账 号"
+        android:textColor="@color/cl_965aff"
+        android:textSize="30px" />
+
+    <Button
+        android:id="@+id/btn_log_out"
+        style="@style/btn_system_style"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:gravity="center"
+        android:text="退 出 登 录" />
+
+</RelativeLayout>

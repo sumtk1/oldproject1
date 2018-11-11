@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_bg_gray"
+    tools:context=".ui.activity.my.ziliao.shimingrenzheng.RenZheng03Activity">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar" />
+
+    <LinearLayout
+        android:id="@+id/ll_realname"
+        android:layout_width="match_parent"
+        android:layout_height="400px"
+        android:layout_below="@+id/in_titlebar"
+        android:background="@color/white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/im_shiming_type"
+            android:layout_width="120px"
+            android:layout_height="120px"
+            android:layout_marginTop="46px" />
+
+        <TextView
+            android:id="@+id/tv_shiming_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="46px"
+            android:text=""
+            android:textColor="#666666"
+            android:textSize="36px" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btu_success"
+        style="@style/btn_system_style"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90px"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:text="完  成" />
+
+</RelativeLayout>

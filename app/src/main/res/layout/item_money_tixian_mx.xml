@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="48px"
+            android:layout_marginTop="44px"
+            android:text=""
+            android:textColor="@color/main_color"
+            android:textSize="48px" />
+
+        <TextView
+            android:id="@+id/tv_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_money"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="24px"
+            android:background="@drawable/shape_imaginaryline_2_2b9ced"
+            android:paddingBottom="8px"
+            android:paddingLeft="24px"
+            android:paddingRight="24px"
+            android:paddingTop="8px"
+            android:text=""
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_bank"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="10px"
+            android:layout_marginTop="36px"
+            android:layout_toLeftOf="@id/tv_money"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#333333"
+            android:textSize="30px" />
+
+        <TextView
+            android:id="@+id/tv_cardnum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_bank"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="10px"
+            android:layout_marginTop="18px"
+            android:layout_toLeftOf="@id/tv_money"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#666666"
+            android:textSize="24px" />
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_cardnum"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="10px"
+            android:layout_marginTop="18px"
+            android:layout_toLeftOf="@id/tv_state"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="#999999"
+            android:textSize="24px" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_alignParentBottom="true"
+            android:background="#E0E0E0" />
+
+    </RelativeLayout>
+
+</LinearLayout>

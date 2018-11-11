@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:zhy="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/color_bg_gray">
+
+    <ImageView
+        android:id="@+id/iv_head"
+        android:layout_width="85dp"
+        android:layout_height="85dp"/>
+    <TextView
+        android:id="@+id/tv_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:text="请绘制手势密码"
+        android:textSize="16dp"
+        android:textColor="#333333"/>
+    <TextView
+        android:id="@+id/tv_tishi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        android:text="5次失败后，需要重新登陆"
+        android:textColor="#999999"
+        android:textSize="12sp"/>
+    <com.gloiot.hygo.ui.activity.gesturelock.GetGestureLockView
+        android:id="@+id/id_getGestureLockView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        zhy:count="3"
+        zhy:tryTimes="5" />
+    <TextView
+        android:id="@+id/tv_forgetpaswd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_marginTop="15dp"
+        android:text="忘记手势密码"
+        android:textColor="#1783D2"
+        android:textSize="14dp"/>
+
+</LinearLayout>

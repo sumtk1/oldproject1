@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_titlebar" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/in_titlebar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="96px">
+
+
+            <ImageView
+                android:id="@+id/tv_03"
+                android:layout_width="36px"
+                android:layout_height="36px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/ic_mima" />
+
+            <EditText
+                android:id="@+id/et_forgetpwd_newpwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/tv_03"
+                android:background="@null"
+                android:hint="请设置新密码6-15位"
+                android:inputType="textPassword"
+                android:maxLength="15"
+                android:singleLine="true"
+                android:textColorHint="@color/b4b4b4"
+                android:textSize="30px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="34px"
+                android:background="@color/color_bg_gray" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="96px">
+
+            <ImageView
+                android:id="@+id/tv_04"
+                android:layout_width="36px"
+                android:layout_height="36px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:src="@mipmap/ic_mima" />
+
+            <EditText
+                android:id="@+id/et_forgetpwd_confirmpwd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/tv_04"
+                android:background="@null"
+                android:hint="确认密码"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColorHint="@color/b4b4b4"
+                android:textSize="30px" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="34px"
+                android:background="@color/color_bg_gray" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bnt_confirm"
+        style="@style/btn_system_style"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90px"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text="确 定" />
+
+</RelativeLayout>

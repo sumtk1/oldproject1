@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20px"
+        android:background="@color/cl_white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_item_dingdan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="70px"
+                android:gravity="center_vertical"
+                android:paddingLeft="30px"
+                android:paddingRight="30px">
+
+                <ImageView
+                    android:id="@+id/iv_item_dingdan_xiaotubiao"
+                    android:layout_width="32px"
+                    android:layout_height="30px"
+                    android:src="@mipmap/ic_wodedingdan_xiaotubiao" />
+
+                <TextView
+                    android:id="@+id/tv_item_dingdan_xingming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/tv_item_dingdan_zhuangtai"
+                    android:layout_toRightOf="@+id/iv_item_dingdan_xiaotubiao"
+                    android:ellipsize="marquee"
+                    android:maxLines="1"
+                    android:paddingLeft="20px"
+                    android:paddingRight="20px"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:id="@+id/tv_item_dingdan_bianhao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10px"
+                    android:layout_toLeftOf="@+id/tv_item_dingdan_zhuangtai"
+                    android:layout_toRightOf="@+id/tv_item_dingdan_bianhao1"
+                    android:ellipsize="marquee"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/cl_666666"
+                    android:textSize="24px"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/tv_item_dingdan_zhuangtai"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text=""
+                    android:textColor="@color/cl_2b9ced"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:id="@+id/tv_item_dingdan_bianhao1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_item_dingdan_xingming"
+                    android:layout_alignBottom="@+id/tv_item_dingdan_xingming"
+                    android:layout_toEndOf="@+id/tv_item_dingdan_xingming"
+                    android:layout_toRightOf="@+id/tv_item_dingdan_xingming"
+                    android:paddingLeft="10px"
+                    android:text="订单编号："
+                    android:textColor="@color/cl_666666"
+                    android:textSize="24px"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+            <ListView
+                android:id="@+id/lv_fragment_dingdan_shangpin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                android:dividerHeight="10px"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl_item_dingdan_xianxiajiaoyi"
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="30px"
+                    android:text="线下交易"
+                    android:textColor="#333333"
+                    android:textSize="24px" />
+
+                <com.zyd.wlwsdk.widge.SwitchView
+                    android:id="@+id/sv_item_dingdan_xianxiajiaoyi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50px"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true" />
+
+                <include layout="@layout/include_view_qian"/>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="60px"
+                android:gravity="right"
+                android:paddingRight="30px">
+
+                <TextView
+                    android:id="@+id/iv_item_dingdan_jianshu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/v_item_dingdan_view"
+                    android:gravity="center_vertical"
+                    android:text="件数："
+                    android:textColor="#454545"
+                    android:textSize="24px" />
+
+                <View
+                    android:id="@+id/v_item_dingdan_view"
+                    android:layout_width="2px"
+                    android:layout_height="30px"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15px"
+                    android:layout_marginRight="15px"
+                    android:layout_toLeftOf="@+id/iv_item_dingdan_zongjia1"
+                    android:background="@color/view_sheng" />
+
+                <TextView
+                    android:id="@+id/iv_item_dingdan_zongjia1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/iv_item_dingdan_zongjia"
+                    android:gravity="center_vertical"
+                    android:text="合计："
+                    android:textColor="#454545"
+                    android:textSize="24px" />
+
+
+                <TextView
+                    android:id="@+id/iv_item_dingdan_zongjia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toLeftOf="@+id/iv_item_dingdan_shangjinbi"
+                    android:gravity="center_vertical"
+                    android:text="¥100"
+                    android:textColor="#333333"
+                    android:textSize="24px" />
+
+                <TextView
+                    android:id="@+id/iv_item_dingdan_yunfei"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="(含运费¥0.00)"
+                    android:textColor="@color/cl_666666"
+                    android:textSize="18px"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/item_rl_list_wodedingdan_button"
+            android:layout_width="match_parent"
+            android:layout_height="80px"
+            android:gravity="center_vertical|right"
+            android:visibility="visible">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:background="@color/view_sheng" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right">
+
+                <Button
+                    android:id="@+id/iv_item_dingdan_button1"
+                    android:layout_width="160px"
+                    android:layout_height="48px"
+                    android:layout_marginRight="30px"
+                    android:layout_toLeftOf="@+id/iv_item_dingdan_button2"
+                    android:background="@drawable/btn_wodedingdan_btn1"
+                    android:text="查看物流"
+                    android:textColor="@color/cl_999999"
+                    android:textSize="24px"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/iv_item_dingdan_button2"
+                    android:layout_width="160px"
+                    android:layout_height="48px"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="30px"
+                    android:background="@drawable/btn_dialog_right"
+                    android:text="确认收货"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24px"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

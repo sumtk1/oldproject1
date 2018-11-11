@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.autolayout.AutoRelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.gloiot.hygo.ui.activity.shopping.dianpu.ShangJiaDianPuActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_dianpu_title"
+        android:layout_width="match_parent"
+        android:layout_height="270px"
+        android:background="@mipmap/bg_shangjiadianpu">
+
+        <View
+            android:id="@+id/view_status_bar"
+            android:layout_width="match_parent"
+            android:layout_height="45px"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/iv_dianpu_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_auto_baseheight="width" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#55444444" />
+
+        <RelativeLayout
+            android:id="@+id/rl_titletop_jifenqianbao"
+            android:layout_width="match_parent"
+            android:layout_height="60px"
+            android:layout_below="@id/view_status_bar"
+            android:layout_marginTop="27px">
+
+            <ImageView
+                android:id="@+id/iv_toptitle_back"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_centerVertical="true"
+                android:padding="10px"
+                android:src="@mipmap/ic_titilebar_back" />
+
+            <RelativeLayout
+                android:id="@+id/rl_sousuo"
+                android:layout_width="520px"
+                android:layout_height="60px"
+                android:layout_marginLeft="30px"
+                android:layout_toRightOf="@+id/iv_toptitle_back"
+                android:background="@drawable/bg_dianpu_sousuo"
+                android:gravity="left"
+                android:textSize="25px">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="24px">
+
+                    <ImageView
+                        android:id="@+id/iv_sousuo"
+                        android:layout_width="30px"
+                        android:layout_height="30px"
+                        android:src="@mipmap/icon_dianpu_sousuo" />
+
+                    <EditText
+                        android:id="@+id/et_sousuo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="24px"
+                        android:layout_marginRight="10px"
+                        android:layout_toRightOf="@+id/iv_sousuo"
+                        android:background="@null"
+                        android:hint="请输入店铺内商品"
+                        android:imeOptions="actionSearch"
+                        android:singleLine="true"
+                        android:textColorHint="#c6c6c6"
+                        android:textSize="26px" />
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_sousuo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="搜索"-->
+            <!--android:layout_toRightOf="@+id/rl_sousuo"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginLeft="10px"-->
+            <!--android:textSize="24px"-->
+            <!--android:padding="10px"-->
+            <!--android:textColor="@color/cl_white"/>-->
+            <ImageView
+                android:id="@+id/iv_toptitle_task"
+                android:layout_width="60px"
+                android:layout_height="60px"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="25px"
+                android:padding="10px"
+                android:src="@mipmap/icon_dianpu_xiaoxi" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_dianpu_tubiao"
+            android:layout_width="100px"
+            android:layout_height="100px"
+            android:layout_marginBottom="11px"
+            android:layout_marginLeft="30px"
+            android:layout_marginTop="158px"
+            android:src="@drawable/default_image"
+            app:layout_auto_basewidth="width" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11px"
+            android:layout_marginLeft="15px"
+            android:layout_marginTop="158px"
+            android:layout_toRightOf="@+id/iv_dianpu_tubiao">
+
+            <RelativeLayout
+                android:id="@+id/rl_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="200px">
+
+                <TextView
+                    android:id="@+id/tv_dianpu_ming"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text=""
+                    android:textColor="@color/cl_white"
+                    android:textSize="30px" />
+
+                <ImageView
+                    android:id="@+id/iv_dianpu_dengji"
+                    android:layout_width="33px"
+                    android:layout_height="32px"
+                    android:layout_marginLeft="10px"
+                    android:layout_toRightOf="@+id/tv_dianpu_ming" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tv_dianpu_xiaoliangNum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_01"
+                android:layout_marginTop="18px"
+                android:text=""
+                android:textColor="@color/cl_white"
+                android:visibility="gone"
+                android:textSize="24px" />
+
+            <View
+                android:layout_width="1px"
+                android:layout_height="16px"
+                android:layout_below="@+id/rl_01"
+                android:layout_marginLeft="17px"
+                android:layout_marginTop="24px"
+                android:layout_toRightOf="@+id/tv_dianpu_xiaoliangNum"
+                android:visibility="gone"
+                android:background="@color/cl_white" />
+
+            <TextView
+                android:id="@+id/tv_dianpu_guanzhu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl_01"
+                android:layout_marginLeft="38px"
+                android:layout_marginTop="18px"
+                android:layout_toRightOf="@+id/tv_dianpu_xiaoliangNum"
+                android:text=""
+                android:textColor="@color/cl_white"
+                android:textSize="24px" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_dianpu_guanzhu"
+            android:layout_width="130px"
+            android:layout_height="50px"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="25px"
+            android:layout_marginRight="25px"
+            app:layout_auto_basewidth="width" />
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_dianpu_menu"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@+id/rl_dianpu_title"
+        android:background="@color/cl_white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/ll_dianpu_zonghe"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_dianpu_zonghe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="综合"
+                android:textColor="@color/main_color"
+                android:textSize="14dp" />
+
+            <View
+                android:id="@+id/view_zonghe"
+                android:layout_width="50px"
+                android:layout_height="3px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/main_color" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_dianpu_xiaoliang"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_dianpu_xiaoliang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="销量"
+                android:textColor="@color/cl_333333"
+                android:textSize="14dp" />
+
+            <View
+                android:id="@+id/view_xiaoliang"
+                android:layout_width="50px"
+                android:layout_height="3px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/main_color"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_dianpu_jiage"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/tv_dianpu_jiage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="价格"
+                android:textColor="@color/cl_333333"
+                android:textSize="14dp" />
+
+            <ImageView
+                android:id="@+id/iv_dianpu_jiage"
+                android:layout_width="22px"
+                android:layout_height="14dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="12px"
+                android:layout_toRightOf="@+id/tv_dianpu_jiage"
+                android:src="@mipmap/icon_moren" />
+
+            <View
+                android:id="@+id/view_jiage"
+                android:layout_width="50px"
+                android:layout_height="3px"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/main_color"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="25dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/view_sheng" />
+
+        <LinearLayout
+            android:id="@+id/ll_dianpu_qiehuanjiemian"
+            android:layout_width="45dp"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/iv_dianpu_jiemian"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@mipmap/ic_fenlei_jiemian_2" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/SwipeRefreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/ll_dianpu_menu"
+        android:layout_marginTop="10px"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.zyd.wlwsdk.widge.EmptyLayout
+            android:id="@+id/emptylayout_dianpu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!--<HorizontalScrollView-->
+            <!--android:id="@+id/sv_00"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:scrollbars="none"-->
+            <!--android:layout_height="146px">-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_vertical">-->
+            <!--<GridView-->
+            <!--android:id="@+id/gv_youhuiquan"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:numColumns="auto_fit"-->
+            <!--android:columnWidth="224px"-->
+            <!--android:horizontalSpacing="20px"-->
+            <!--android:layout_gravity="center_vertical"-->
+            <!--android:stretchMode="columnWidth">-->
+            <!--</GridView>-->
+            <!--</LinearLayout>-->
+            <!--</HorizontalScrollView>-->
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_dianpu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" />
+        </com.zyd.wlwsdk.widge.EmptyLayout>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_dianpu_liangxishangjia"
+        android:layout_width="220px"
+        android:layout_height="80px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="16px"
+        android:layout_marginRight="20px"
+        app:layout_auto_basewidth="width">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_liangxishangjia" />
+    </RelativeLayout>
+</com.zyd.wlwsdk.autolayout.AutoRelativeLayout>

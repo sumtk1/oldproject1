@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="200px"
+    android:layout_height="70px">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="30px"
+        android:background="@mipmap/ic_fangkuang">
+
+        <ImageButton
+            android:id="@+id/img_btn_jian"
+            android:layout_width="30px"
+            android:layout_height="70px"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10px"
+            android:background="@null"
+            android:src="@mipmap/ic_jian" />
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="1"
+            android:textColor="@color/black"
+            android:textSize="32px" />
+
+        <ImageButton
+            android:id="@+id/img_btn_jia"
+            android:layout_width="30px"
+            android:layout_height="70px"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="right|center_vertical"
+            android:layout_marginRight="10px"
+            android:background="@null"
+            android:src="@mipmap/ic_jia" />
+
+
+    </FrameLayout>
+</LinearLayout>

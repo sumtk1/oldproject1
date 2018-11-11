@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="720px"
+        android:layout_height="230px"
+        android:background="@color/cl_white"
+        app:layout_auto_basewidth="height">
+
+        <ImageView
+            android:id="@+id/iv_item_shangpin_fenlei_tupian"
+            android:layout_width="230px"
+            android:layout_height="230px"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_launcher"
+            app:layout_auto_basewidth="height" />
+
+        <FrameLayout
+            android:id="@+id/fl_fenlei_title"
+            android:layout_width="355px"
+            android:layout_height="60px"
+            android:layout_marginLeft="20px"
+            android:layout_marginRight="30px"
+            android:layout_marginTop="30px"
+            android:layout_toRightOf="@+id/iv_item_shangpin_fenlei_tupian"
+            app:layout_auto_baseheight="width">
+
+
+            <TextView
+                android:id="@+id/tv_item_shangpin_fenlei_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="2"
+                android:text=""
+                android:textColor="@color/cl_333333"
+                android:textSize="26px" />
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/tv_item_shangpin_fenlei_jiage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/fl_fenlei_title"
+            android:layout_marginLeft="20px"
+            android:layout_marginTop="70px"
+            android:layout_toRightOf="@+id/iv_item_shangpin_fenlei_tupian"
+            android:maxLines="1"
+            android:maxWidth="300px"
+            android:text="¥"
+            android:textColor="@color/cl_E33333"
+            android:textSize="36px" />
+
+        <TextView
+            android:id="@+id/tv_item_shangpin_fenlei_dizhi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_item_shangpin_fenlei_jiage"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/fl_fenlei_title"
+            android:layout_marginRight="30px"
+            android:layout_toRightOf="@+id/tv_item_shangpin_fenlei_jiage"
+            android:gravity="right"
+            android:layout_marginLeft="10px"
+            android:text=""
+            android:textColor="@color/cl_999999"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="24px" />
+    </RelativeLayout>
+
+</LinearLayout>

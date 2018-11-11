@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cl_white"
+        android:paddingBottom="30px"
+        android:paddingTop="30px">
+
+        <ImageView
+            android:id="@+id/item_yonghupinglun_img"
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:layout_marginLeft="30px"/>
+        
+        <TextView
+            android:id="@+id/item_yonghupinglun_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text=""
+            android:textColor="@color/cl_999999"
+            android:layout_marginRight="30px"
+            android:textSize="22px" />
+        <TextView
+            android:id="@+id/item_yonghupinglun_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16px"
+            android:layout_toRightOf="@+id/item_yonghupinglun_img"
+            android:gravity="center_vertical"
+            android:text=""
+            android:layout_toLeftOf="@+id/item_yonghupinglun_time"
+            android:textColor="@color/cl_333333"
+            android:maxLines="1"
+            android:ellipsize="end"
+            android:textSize="26px" />
+
+        <TextView
+            android:id="@+id/item_yonghupinglun_guige"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16px"
+            android:layout_toRightOf="@+id/item_yonghupinglun_img"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@color/cl_999999"
+            android:layout_below="@+id/item_yonghupinglun_title"
+            android:layout_marginTop="15px"
+            android:textSize="22px" />
+
+      
+
+        <TextView
+            android:id="@+id/item_yonghupinglun_neirong"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/item_yonghupinglun_img"
+            android:layout_marginTop="20px"
+            android:layout_marginRight="30px"
+            android:layout_marginLeft="30px"
+            android:text=""
+            android:textColor="@color/cl_333333"
+            android:textSize="24px" />
+
+        <GridView
+            android:id="@+id/gv_yonghupingjia_tu"
+            android:layout_width="match_parent"
+            android:layout_height="164px"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:layout_below="@+id/item_yonghupinglun_neirong"
+            android:layout_marginTop="21px"
+            android:numColumns="4"
+            android:horizontalSpacing="6px"
+            android:visibility="gone">
+        </GridView>
+
+        <RelativeLayout
+            android:id="@+id/rl_yonghupingjia_huifu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/gv_yonghupingjia_tu"
+            android:layout_marginLeft="30px"
+            android:layout_marginRight="30px"
+            android:visibility="gone"
+            android:layout_marginTop="20px">
+            <TextView
+                android:id="@+id/tv_yonghupingjia_huifu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text=""
+                android:textSize="26px"
+                android:gravity="center_vertical"
+                android:background="@drawable/bg_huifu"
+                android:textColor="@color/cl_666666"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_yonghupingjia_zhuijia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_yonghupingjia_huifu"
+            android:visibility="gone"
+            android:layout_marginTop="20px">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1px"
+                android:layout_marginLeft="30px"
+                android:background="#dedede"/>
+
+            <TextView
+                android:id="@+id/tv_yonghupingjia_zhuijiaTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="26px"
+                android:textColor="@color/main_color"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="30px"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/tv_yonghupingjia_zhuiping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_below="@+id/tv_yonghupingjia_zhuijiaTime"
+                android:layout_marginTop="30px"
+                android:text=""
+                android:textSize="26px"
+                android:textColor="@color/cl_333333"/>
+            <GridView
+                android:id="@+id/gv_yonghupingjia_zhuijiatu"
+                android:layout_width="match_parent"
+                android:layout_height="164px"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:layout_below="@+id/tv_yonghupingjia_zhuiping"
+                android:layout_marginTop="21px"
+                android:numColumns="4"
+                android:horizontalSpacing="6px"
+                android:visibility="gone">
+            </GridView>
+            <RelativeLayout
+                android:id="@+id/rl_yonghupingjia_zuijiahuifu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/gv_yonghupingjia_zhuijiatu"
+                android:layout_marginLeft="30px"
+                android:layout_marginRight="30px"
+                android:visibility="gone"
+                android:layout_marginTop="20px">
+
+                <TextView
+                    android:id="@+id/tv_yonghupingjia_zuijiahuifu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:background="@drawable/bg_huifu"
+                    android:textSize="26px"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/cl_666666"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

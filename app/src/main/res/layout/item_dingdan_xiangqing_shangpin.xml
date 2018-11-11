@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_item_dingdan_shangpin"
+        android:layout_width="match_parent"
+        android:layout_height="203px"
+        android:background="@color/cl_white"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_item_dingdan_shangpin_tupian"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="30px"
+            android:layout_weight="2"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/iv_item_dingdan_tubiao"
+                android:layout_width="150px"
+                android:layout_height="150px"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                app:layout_auto_basewidth="height" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_item_dingdan_shangpin_xinxi"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:paddingLeft="20px">
+
+            <FrameLayout
+                android:id="@+id/fl_xiangqing_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_item_shouye_tupian"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="30px"
+                app:layout_auto_baseheight="width">
+
+                <TextView
+                    android:id="@+id/tv_item_dingdan_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:textColor="@color/black"
+                    android:textSize="24px"
+                    app:layout_auto_baseheight="width" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/tv_item_dingdan_guige"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/fl_xiangqing_title"
+                android:layout_marginRight="10px"
+                android:layout_marginTop="26px"
+                android:layout_toLeftOf="@+id/tv_item_dingdan_shuliang"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:textColor="@color/cl_999999"
+                android:textSize="24px" />
+
+            <TextView
+                android:id="@+id/tv_item_dingdan_shuliang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/fl_xiangqing_title"
+                android:layout_marginRight="30px"
+                android:layout_marginTop="26px"
+                android:textColor="@color/cl_999999"
+                android:textSize="24px" />
+
+            <TextView
+                android:id="@+id/tv_item_dingdan_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="30px"
+                android:textColor="@color/black"
+                android:textSize="26px" />
+
+            <Button
+                android:id="@+id/iv_item_dingdan_button1"
+                style="@style/btn_style_01"
+                android:layout_width="130px"
+                android:layout_height="46px"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="30px"
+                android:layout_marginRight="30px"
+                android:text="查看物流"
+                android:textColor="@color/cl_999999"
+                android:textSize="24px"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tv_item_dingdan_shangpin_zhuangtai"
+        android:layout_width="83px"
+        android:layout_height="83px"
+        android:visibility="gone" />
+
+</RelativeLayout>

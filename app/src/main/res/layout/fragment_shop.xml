@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zyd.wlwsdk.widge.EmptyLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/empty_fragment_shop"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/sf_fragment_shop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/cl_background">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_fragment_shop"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:focusable="true"
+                android:focusableInTouchMode="true"/>
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/fragment_shopping_shouye_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00ffffff"
+            android:orientation="vertical">
+            <View
+                android:id="@+id/view_status_bar"
+                android:layout_width="match_parent"
+                android:layout_height="45px"
+                android:alpha="40"
+                android:visibility="gone" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="96px"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/rl_sousuo"
+                    android:layout_width="0px"
+                    android:layout_height="60px"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="30px"
+                    android:layout_weight="1"
+                    android:background="@drawable/bg_shouye_sousuo"
+                    android:focusableInTouchMode="true"
+                    android:gravity="left"
+                    android:textSize="25px">
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="24px">
+                        <ImageView
+                            android:id="@+id/iv_sousuo"
+                            android:layout_width="30px"
+                            android:layout_height="30px"
+                            android:src="@mipmap/icon_search" />
+                        <TextView
+                            android:id="@+id/sousuo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="24px"
+                            android:layout_toRightOf="@+id/iv_sousuo"
+                            android:background="@null"
+                            android:hint="搜索商品"
+                            android:textColorHint="@color/cl_666666"
+                            android:textSize="28px" />
+                    </RelativeLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/rl_conversationList"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="28px"
+                    android:layout_marginRight="20px"
+                    android:visibility="visible">
+                    <ImageView
+                        android:id="@+id/ivConversationList"
+                        android:layout_width="45px"
+                        android:layout_height="45px"
+                        android:layout_centerInParent="true"
+                        android:src="@mipmap/icon_message" />
+                    <View
+                        android:id="@+id/dotView"
+                        android:layout_width="8px"
+                        android:layout_height="8px"
+                        android:layout_marginLeft="45px"
+                        android:layout_marginTop="28px"
+                        android:background="@drawable/circle_shape"
+                        android:visibility="gone" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="200px"
+            android:layout_height="84px"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom|left"
+            android:layout_marginBottom="16px"
+            android:layout_marginLeft="16px"
+            android:background="@drawable/bg_toast_style"
+            app:layout_auto_basewidth="height">
+            <RelativeLayout
+                android:id="@+id/rl_shouye_shoucang"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="42px"
+                    android:layout_height="38px"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_shouye_shoucang" />
+            </RelativeLayout>
+            <View
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:background="#33ffffff" />
+            <RelativeLayout
+                android:id="@+id/rl_shouye_gouwuche"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="42px"
+                    android:layout_height="38px"
+                    android:layout_centerInParent="true"
+                    android:src="@mipmap/ic_shouye_gouwuche" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+</com.zyd.wlwsdk.widge.EmptyLayout>

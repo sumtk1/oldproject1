@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#87A4ED">
+
+    <include
+        android:id="@+id/in_titlebar"
+        layout="@layout/include_zese" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_titlebar"
+        android:layout_marginLeft="30px"
+        android:layout_marginRight="30px"
+        android:layout_marginTop="72px"
+        android:background="#ffffff"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="38px"
+            android:text="扫二维码向我付款"
+            android:textColor="#999999"
+            android:textSize="32px"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginTop="38px"
+            android:background="#EFEFEF"/>
+        <ImageView
+            android:id="@+id/iv_shoukuan_icon"
+            android:layout_width="72px"
+            android:layout_height="72px"
+            android:layout_marginTop="30px"
+            android:layout_gravity="center_horizontal" />
+        <TextView
+            android:id="@+id/tv_shoukuan_nick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px"
+            android:layout_gravity="center_horizontal"
+            android:text=""
+            android:textSize="30px"
+            android:textColor="#333333" />
+        <ImageView
+            android:id="@+id/iv_shoukuan_qrcode"
+            android:layout_width="400px"
+            android:layout_height="400px"
+            android:layout_marginTop="30px"
+            android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10px"
+            android:text=""
+            android:textColor="#999999"
+            android:textSize="28px"/>
+        <RelativeLayout
+            android:id="@+id/rl_shoukuan_jilu"
+            android:layout_width="match_parent"
+            android:layout_height="98px"
+            android:layout_marginTop="30px"
+            android:background="@drawable/bg_bank_gray">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="收款记录"
+                android:textColor="#666666"
+                android:textSize="30px" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

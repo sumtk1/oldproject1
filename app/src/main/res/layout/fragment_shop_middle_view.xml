@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <ImageView
+        android:id="@+id/fragment_shop_middle_iv_huodong"
+        android:layout_width="match_parent"
+        android:layout_height="200px"
+        android:scaleType="fitXY"
+        app:layout_auto_basewidth="height"
+        app:layout_collapseMode="pin"/>
+
+    <RelativeLayout
+        android:id="@+id/fragment_shop_middle_rl_quanqiugou"
+        android:layout_width="720px"
+        android:layout_height="594px"
+        app:layout_auto_basewidth="height">
+        <ImageView
+            android:id="@+id/fragment_shop_middle_iv_quanqiu"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_auto_basewidth="height"
+            app:layout_collapseMode="pin"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/fragment_shop_middle_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="10px"
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/fragment_shop_middle_iv_tuijian"
+        android:layout_width="match_parent"
+        android:layout_height="110px"
+        android:layout_marginBottom="10px"
+        android:scaleType="fitXY"
+        app:layout_auto_basewidth="height"
+        app:layout_collapseMode="pin"/>
+
+</LinearLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/item_lingqu_youhuiquan_bg"
+        android:layout_width="660px"
+        android:layout_height="250px"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12px"
+        android:layout_marginTop="12px"
+        android:background="@mipmap/ic_lingqu_youhuiquan_red">
+
+        <RelativeLayout
+            android:layout_width="230px"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/item_lingqu_youhuiquan_jine"
+                android:text="¥"
+                android:textColor="@color/cl_white"
+                android:textSize="44px" />
+
+            <TextView
+                android:id="@+id/item_lingqu_youhuiquan_jine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30px"
+                android:text="0"
+                android:textColor="@color/cl_white"
+                android:textSize="76px" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="430px"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:paddingLeft="34px"
+            android:paddingRight="30px">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="8px"
+                    android:layout_height="8px"
+                    android:src="@mipmap/ic_yuandian_white" />
+
+                <TextView
+                    android:id="@+id/item_lingqu_youhuiquan_shangjia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14px"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="环游自营使用券"
+                    android:textColor="@color/cl_white"
+                    android:textSize="22px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="8px"
+                    android:layout_height="8px"
+                    android:src="@mipmap/ic_yuandian_white" />
+
+                <TextView
+                    android:id="@+id/item_lingqu_youhuiquan_tianjian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14px"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="环游自营使用券"
+                    android:textColor="@color/cl_white"
+                    android:textSize="22px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="8px"
+                    android:layout_height="8px"
+                    android:src="@mipmap/ic_yuandian_white" />
+
+                <TextView
+                    android:id="@+id/item_lingqu_youhuiquan_shijian"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14px"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="环游自营使用券"
+                    android:textColor="@color/cl_white"
+                    android:textSize="22px" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="8px"
+                    android:baselineAlignBottom="true"
+                    android:layout_height="8px"
+                    android:src="@mipmap/ic_yuandian_white" />
+
+                <TextView
+                    android:id="@+id/item_lingqu_youhuiquan_shuoming"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="14px"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="环游自营使用券环游自营使用券环游自营使用券环游自营使用券环游自营使用券环游自营使用券环游自营使用券"
+                    android:textColor="@color/cl_white"
+                    android:textSize="22px" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
